@@ -1,0 +1,12 @@
+/* メールのタイトル */
+.mail__ttl{
+    padding: 3rem 0rem;
+    background-color: #303030;
+    color: #fff;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.mail__content{
+    font-size: 1.8rem;
+}

@@ -1,0 +1,182 @@
+.hidden{
+    display: none;
+}
+
+/*ロゴ一覧*/
+/* .logoArea__title{
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.logoArea__list{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    list-style-type: none;
+}
+
+.logoArea__list__logo{
+    position: relative;
+    margin: 1rem;
+    padding: 1rem;
+    width: 16rem;
+    background: #fff;
+    text-align: center;
+}
+
+.logoLike{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4rem;
+    background: rgba(33,33,33,0.5);
+    text-align: center;
+    transition: 0.4s ease-in-out;
+    opacity: 0;
+}
+
+.logoLike i{
+    font-size: 2rem;
+    line-height: 4rem;
+    pointer-events: none;
+}
+
+/*気になるアイコン*/
+/* .like_off{
+    color: #fff;
+}
+.like_on{
+    color: #f33;
+} */
+
+/*重ね*/
+/* .logoArea__list__logo:hover .logoLike{
+    display: block;
+    opacity: 1;
+} */
+
+/*アイコンの画像*/
+/* .imageView{
+    padding: 1rem 0;
+    width: 100%;
+    text-align: center;
+}
+
+.imageView img{
+    width: auto;
+    height: 10rem;
+} */
+
+/*気になるリスト*/
+/* .logoArea__likeList{
+    position: fixed;
+    z-index: 1;
+    top: 15rem;
+    left: 0rem;
+    padding: 1rem;
+    width: 10rem;
+    background: #B4BF5E;
+}
+
+.logoArea__likeList h2{
+    width: 100%;
+    font-size: 1.5rem;
+}
+
+.logoArea__likeList__likeLogo{
+    margin: 0.5rem;
+    width: 7rem;
+    text-align: center;
+    background: #fff;
+}
+
+.logoArea__likeList__likeLogo img{
+    width: 4rem;
+} */
+
+/* ロゴの投稿 */
+.step-menu{
+    padding: 0 10rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.step-menu li{
+    padding: 0.5rem 1.5rem;
+    width: 25%;
+    list-style-type: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+.step-menu .now{
+    background: #F2A679;
+    color: #fff;
+}
+
+/* ロゴのステップエリア */
+.step-area{
+    padding: 0 10rem;
+    height: 25rem;
+}
+
+.step-area .content-title{
+    font-size: 1.2rem;
+}
+
+.step-area .color_area,.step-area .format_area,.step-area .improve_area,.step-area .type_area,.step-area .type_child_area{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.step-area .color-select span{
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+}
+
+.step-area .color_select{
+    position: relative;
+}
+
+.step-area .color_select::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.5rem;
+    width: 100%;
+    height: 100%;
+    border-bottom: 2px solid #707070;
+}
+
+.step-area .color_area li{
+    margin: 0.5rem 1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    list-style-type: none;
+    cursor: pointer;
+}
+
+.step-area .format_area li,.step-area .improve_area li,.step-area .type_area li,.step-area .type_child_area li{
+    margin: 0.5rem 1rem;
+    height: 2.5rem;
+    border: 1px solid #707070;
+    line-height: 2.5rem;
+    text-align: center;
+    list-style-type: none;
+    cursor: pointer;
+}
+
+.step-area .format_area li,.step-area .improve_area li{
+    width: 9rem;
+}
+
+.step-area .type_area li{
+    width: 14rem;
+}
+
+.step-area .select_now{
+    background: #B4BF5E;
+    border: 1px solid #B4BF5E;
+}

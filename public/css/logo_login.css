@@ -1,0 +1,127 @@
+.login {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.login__loginArea,
+.login__siginArea {
+  margin-bottom: 6rem;
+  padding: 2rem 3rem;
+  width: 600px;
+}
+
+.login__loginArea__ttl,
+.login__siginArea__ttl {
+  padding: 1.2rem 0;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.login__loginArea {
+  background: #E8E8E8;
+}
+
+.login__siginArea p {
+  font-size: 1rem;
+  line-height: 1.6rem;
+}
+
+.login__loginArea__content {
+  margin-top: 1rem;
+}
+
+.login__loginArea__content .contentTitle {
+  margin: 0.6rem 0;
+  font-size: 0.8rem;
+}
+
+.login__loginArea__content .content input {
+  padding: 0.6rem 1.2rem;
+  width: 100%;
+  background: #fff;
+  border: 1px solid #707070;
+  border-radius: 0.2rem;
+  font-size: 1rem;
+}
+
+.login__loginArea__send,
+.login__siginArea__link a {
+  display: block;
+  margin: 1rem 0;
+  width: 100%;
+  height: 3.6rem;
+  font-size: 1rem;
+  line-height: 3.6rem;
+  text-align: center;
+  color: #fff;
+}
+
+.login__loginArea__send {
+  background: #F2A679;
+}
+
+.login__siginArea__link a {
+  text-decoration: none;
+  background: #B4BF5E;
+}
+
+.sigin {
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.sigin__siginArea__ttl {
+  padding: 1.2rem 0;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.sigin__siginArea__content {
+  margin-top: 1rem;
+}
+
+.sigin__siginArea__content .contentTitle {
+  margin: 0.6rem 0;
+  font-size: 0.8rem;
+  text-align: left;
+}
+
+.sigin__siginArea__content .content input {
+  padding: 0.6rem 1.2rem;
+  width: 100%;
+  background: #fff;
+  border: 1px solid #707070;
+  border-radius: 0.2rem;
+  font-size: 1rem;
+}
+
+.sigin__siginArea__btn {
+  display: block;
+  margin: 1rem 0;
+  width: 100%;
+  height: 3.6rem;
+  font-size: 1rem;
+  line-height: 3.6rem;
+  text-align: center;
+  color: #fff;
+  background: #F2A679;
+}
+
+.registered {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.registered__ttl {
+  margin: 2rem 0 1.2rem;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.registered__content p {
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+}
+

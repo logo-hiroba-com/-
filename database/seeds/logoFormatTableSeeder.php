@@ -1,0 +1,81 @@
+<?php
+
+use Illuminate\Database\Seeder;
+
+class logoFormatTableSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        //ロゴの形
+        \DB::table('logo_formats')->insert([
+            [
+                "format_name"=>"地球・惑星"
+            ],
+            [
+                "format_name"=>"太陽"
+            ],
+            [
+                "format_name"=>"月"
+            ],
+            [
+                "format_name"=>"星"
+            ],
+            [
+                "format_name"=>"球体"
+            ],
+            [
+                "format_name"=>"三角形"
+            ],
+            [
+                "format_name"=>"四角形"
+            ],
+            [
+                "format_name"=>"多角形"
+            ],
+            [
+                "format_name"=>"リング"
+            ],
+            [
+                "format_name"=>"輪"
+            ],
+            [
+                "format_name"=>"ハート"
+            ],
+            [
+                "format_name"=>"乗り物"
+            ],
+            [
+                "format_name"=>"花"
+            ],
+            [
+                "format_name"=>"笑顔"
+            ],
+            [
+                "format_name"=>"人物"
+            ],
+            [
+                "format_name"=>"動物・生き物"
+            ],
+            [
+                "format_name"=>"建物・家"
+            ],
+            [
+                "format_name"=>"道具"
+            ],
+            [
+                "format_name"=>"食べ物・飲み物"
+            ],
+            [
+                "format_name"=>"王冠"
+            ],
+            [
+                "format_name"=>"羽・翼"
+            ]
+        ]);
+    }
+}

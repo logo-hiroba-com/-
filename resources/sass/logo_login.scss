@@ -1,0 +1,121 @@
+.login{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 1200px;
+
+    &__loginArea,&__siginArea{
+        margin-bottom: 6rem;
+        padding: 2rem 3rem;
+        width: 600px;
+        &__ttl{
+            padding: 1.2rem 0;
+            font-size: 1.4rem;
+            text-align: center;
+        }//.ttl
+    }//.loginArea,.siginArea
+
+    &__loginArea{
+        background: #E8E8E8;
+    }//.loginArea
+
+    &__siginArea{
+        p{
+            font-size: 1rem;
+            line-height: 1.6rem;
+        }
+    }//.siginArea
+
+    //ログイン
+    &__loginArea__content{
+        margin-top: 1rem;
+        .contentTitle{
+            margin: 0.6rem 0;
+            font-size: 0.8rem;
+        }//.contentTitle
+        .content{
+            input{
+                padding: 0.6rem 1.2rem;
+                width: 100%;
+                background: #fff;
+                border: 1px solid #707070;
+                border-radius: 0.2rem;
+                font-size: 1rem;
+            }//input
+        }//content
+    }//.loginArea__content
+
+    //ボタン
+    &__loginArea__send,&__siginArea__link a{
+        display: block;
+        margin: 1rem 0;
+        width: 100%;
+        height: 3.6rem;
+        font-size: 1rem;
+        line-height: 3.6rem;
+        text-align: center;
+        color: #fff;
+    }//.loginArea__send,.loginArea__link
+    &__loginArea__send{
+        background: #F2A679;
+    }//.loginArea__send
+    &__siginArea__link a{
+        text-decoration: none;
+        background: #B4BF5E;
+    }//.loginArea__link
+}//.login
+
+.sigin{
+    margin: 0 auto;
+    max-width: 600px;
+    &__siginArea__ttl{
+        padding: 1.2rem 0;
+        font-size: 1.4rem;
+        text-align: center;
+    }//.ttl
+    &__siginArea__content{
+        margin-top: 1rem;
+        .contentTitle{
+            margin: 0.6rem 0;
+            font-size: 0.8rem;
+            text-align: left;
+        }//.contentTitle
+        .content{
+            input{
+                padding: 0.6rem 1.2rem;
+                width: 100%;
+                background: #fff;
+                border: 1px solid #707070;
+                border-radius: 0.2rem;
+                font-size: 1rem;
+            }//input
+        }//content
+    }//.loginArea__content
+    &__siginArea__btn{
+        display: block;
+        margin: 1rem 0;
+        width: 100%;
+        height: 3.6rem;
+        font-size: 1rem;
+        line-height: 3.6rem;
+        text-align: center;
+        color: #fff;
+        background: #F2A679;
+    }//.btn
+}//.sigin
+
+.registered{
+    margin: 0 auto;
+    max-width: 1200px;
+    &__ttl{
+        margin: 2rem 0 1.2rem;
+        text-align: center;
+        font-size: 1.2rem;
+    }//.ttl
+    &__content{
+        p{
+            font-size: 0.8rem;
+            line-height: 1.2rem;
+        }
+    }//.content
+}
