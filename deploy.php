@@ -7,7 +7,7 @@ require 'recipe/common.php';
 set('application', 'my_project');
 
 // Project repository
-set('repository', '');
+set('repository', 'https://github.com/qhlili0821/-.git');
 
 // [Optional] Allocate tty for git clone. Default value is false.
 set('git_tty', true); 
@@ -22,8 +22,11 @@ set('writable_dirs', []);
 
 // Hosts
 
-host('project.com')
-    ->set('deploy_path', '~/{{application}}');    
+host('click.ecc.ac.jp')
+    ->user('syuseika')
+    ->stage('logos')
+    ->set('branch', 'master')
+    ->set('deploy_path', 'click.ecc.ac.jp/ecc/syuseika/laravel');    
     
 
 // Tasks
@@ -45,5 +48,13 @@ task('deploy', [
     'success'
 ]);
 
+desc('test_task');
+task('test_task', function () {
+    $result = run('cd /var/www/html; pwd');
+    writeln("Current dir: $result");
+});
+ 
+after('deploy', 'test_task');
+ 
 // [Optional] If deploy fails automatically unlock.
 after('deploy:failed', 'deploy:unlock');

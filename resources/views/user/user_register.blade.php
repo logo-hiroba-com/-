@@ -8,7 +8,7 @@
 @stop
 
 @section('styles')
-  <link rel="stylesheet" href="{{asset('css/logo_login.css')}}">
+  <link rel="stylesheet" href="{{asset('css/sigin.css')}}">
 @stop
 
 @section('content')
@@ -18,48 +18,30 @@
         <form action="{{ route('usercheck') }}" method="post">
             @csrf
             <div class="sigin__siginArea__content">
-                <p class="contentTitle">氏名</p>
+                <p class="contentTitle">ユーザーネーム</p>
                 <div class="content">
                     <input type="text" name="name" class="form-control" value="" placeholder="ロゴ　太郎">
-                    <div class="input-group-append">
-                        <div class="input-group-text">
-                            <span class="fas fa-envelope"></span>
-                        </div>
-                    </div>
                 </div>
             </div>
             
             <div class="sigin__siginArea__content">
                 <p class="contentTitle">メールアドレス</p>
                 <div class="content">
-                <input type="email" name="email" class="form-control" value="" placeholder="例：logo.hiroba@gmail.com">
-                <div class="input-group-append">
-                    <div class="input-group-text">
-                        <span class="fas fa-envelope"></span>
-                    </div>
-                </div>
+                    <input type="email" name="email" class="form-control" value="" placeholder="例：logo.hiroba@gmail.com">
                 </div>
             </div>
 
             <div class="sigin__siginArea__content">
                 <p class="contentTitle">パスワード</p>
                 <div class="content">
-                <input type="password" name="password" class="form-control" placeholder="">
-                <div class="input-group-append">
-                    <div class="input-group-text">
-                        <span class="fas fa-lock"></span>
-                    </div>
+                    <input type="password" name="password" class="form-control" placeholder="">
                 </div>
             </div>
 
             <div class="sigin__siginArea__content">
                 <p class="contentTitle">パスワード（再入力）</p>
                 <div class="content">
-                <input type="password" name="password_confirmation" class="form-control" placeholder="">
-                <div class="input-group-append">
-                    <div class="input-group-text">
-                        <span class="fas fa-lock"></span>
-                    </div>
+                    <input type="password" name="password_confirmation" class="form-control" placeholder="">
                 </div>
             </div>
 
@@ -68,11 +50,11 @@
                 <div class="content">
                 <div class="input-group-append">
                     <label class="radio" for="customer">
-                        <input id="customer" type="radio" name="usertype" value="0" checked>
+                        <input id="customer" type="radio" name="usertype" value="1" checked>
                         購入者として
                     </label>
                     <label class="radio" for="designer">
-                        <input id="designer" type="radio" name="usertype" value="1">
+                        <input id="designer" type="radio" name="usertype" value="0">
                         デザイナーとして
                     </label>
                 </div>
@@ -88,6 +70,8 @@
             @if(!empty($error_num))
                 @if($error_num==1)
                 <p><strong>二回入力されたパスワードが違います。</strong></p>
+                @else($error_num==2)
+                <p><strong>すでに登録されているメールアドレスです。</strong></p>
                 @endif
             @endif
 

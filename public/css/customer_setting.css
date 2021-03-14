@@ -1,0 +1,476 @@
+.mypage__menu__wrap {
+  height: 825px;
+}
+
+.mypage__menu__wrap .mypage__menu__box {
+  width: 400px;
+  height: 825px;
+  background-color: #F8F8F8;
+}
+
+.mypage__menu__wrap .mypage__menu__box .mypage__menu__typeChangeBox {
+  display: -webkit-box;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  padding-top: 30px;
+}
+
+.mypage__menu__wrap .mypage__menu__box .mypage__menu__typeChangeBox .mypage__menu__usertype {
+  font-size: 1.5rem;
+  margin-right: 20px;
+  color: #707070;
+}
+
+.mypage__menu__wrap .mypage__menu__box .mypage__menu__typeChangeBox a {
+  text-decoration: none;
+  color: #333333;
+}
+
+.mypage__menu__wrap .mypage__menu__box .mypage__menu__typeChangeBox a .mypage__menu__typeChangeBT {
+  font-size: 1.5rem;
+  margin-right: 30px;
+  cursor: pointer;
+  color: #707070;
+}
+
+.mypage__menu__wrap .mypage__menu__box .mypage__menu__nameTitle {
+  font-size: 1.2rem;
+  margin-top: 30px;
+  margin-left: 50px;
+  margin-bottom: 10px;
+  color: #707070;
+}
+
+.mypage__menu__wrap .mypage__menu__box .mypage__menu__name {
+  font-size: 2.4rem;
+  margin-left: 50px;
+  color: #707070;
+}
+
+.mypage__menu__wrap .mypage__menu__box ul.mypage__menu__BtBox {
+  margin-top: 40px;
+}
+
+.mypage__menu__wrap .mypage__menu__box ul.mypage__menu__BtBox a {
+  text-decoration: none;
+  color: #333333;
+}
+
+.mypage__menu__wrap .mypage__menu__box ul.mypage__menu__BtBox a:last-child {
+  background-color: red;
+}
+
+.mypage__menu__wrap .mypage__menu__box ul.mypage__menu__BtBox a:last-child::after {
+  content: "";
+  display: block;
+  width: 400px;
+  height: 1px;
+  background-color: #707070;
+  position: relative;
+  bottom: 0;
+}
+
+.mypage__menu__wrap .mypage__menu__box ul.mypage__menu__BtBox li {
+  height: 65px;
+  list-style-type: none;
+}
+
+.mypage__menu__wrap .mypage__menu__box ul.mypage__menu__BtBox li:hover {
+  background-color: white;
+  cursor: pointer;
+}
+
+.mypage__menu__wrap .mypage__menu__box ul.mypage__menu__BtBox li::before {
+  content: "";
+  display: block;
+  width: 400px;
+  height: 1px;
+  background-color: #707070;
+  position: relative;
+  top: 0;
+}
+
+.mypage__menu__wrap .mypage__menu__box ul.mypage__menu__BtBox li .mypage__menu__BtContentsBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.mypage__menu__wrap .mypage__menu__box ul.mypage__menu__BtBox li .mypage__menu__BtContentsBox img {
+  line-height: 65px;
+  margin-left: 50px;
+}
+
+.mypage__menu__wrap .mypage__menu__box ul.mypage__menu__BtBox li .mypage__menu__BtContentsBox div {
+  line-height: 65px;
+  margin-left: 25px;
+  font-size: 2.0rem;
+  color: #707070;
+}
+
+.mypage__menu__wrap .mypage__menu__box ul.mypage__menu__BtBox li .mypage__menu__BtContentsBox .mypage__menu__newsBtMark {
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #EB5050;
+  margin: auto 0 auto 15px;
+}
+
+.mypage__menu__wrap .mypage__menu__box .mypage__menu__AdBox {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.mypage__menu__wrap .mypage__menu__box .mypage__menu__AdBox div {
+  text-align: center;
+}
+
+.mypage__menu__wrap .mypage__menu__box .mypage__menu__AdBox div:last-child {
+  margin-top: 30px;
+}
+
+.mypage__menu__wrap .mypage__menu__box .mypage__menu__AdBox div img {
+  width: 250px;
+}
+
+.mypage__setting__wrap {
+  width: 100%;
+  height: 825px;
+}
+
+.mypage__setting__wrap .mypage__setting__box {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.mypage__setting__wrap .mypage__setting__box .mypage__setting__titleBox {
+  position: absolute;
+  z-index: 10;
+  display: block;
+  width: 800px;
+  height: 100px;
+  background-color: white;
+}
+
+.mypage__setting__wrap .mypage__setting__box .mypage__setting__titleBox h1 {
+  font-size: 2.0rem;
+  padding-top: 40px;
+  text-align: center;
+}
+
+.mypage__setting__wrap .mypage__setting__box .mypage__setting__contentsBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 130px;
+}
+
+.mypage__setting__wrap .mypage__setting__box .mypage__setting__contentsBox .mypage__setting__left ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 200px;
+  height: 200px;
+  padding: 20px auto;
+  border-right: 3px solid #707070;
+}
+
+.mypage__setting__wrap .mypage__setting__box .mypage__setting__contentsBox .mypage__setting__left ul li {
+  list-style-type: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.mypage__setting__wrap .mypage__setting__box .mypage__setting__contentsBox .mypage__setting__left ul li:hover {
+  color: #B4BF5E;
+}
+
+.mypage__setting__wrap .mypage__setting__box .mypage__setting__contentsBox .mypage__setting__left ul li:first-child {
+  color: #B4BF5E;
+}
+
+.mypage__setting__wrap .mypage__setting__box .mypage__setting__contentsBox .mypage__setting__right__user {
+  width: 600px;
+  padding-left: 100px;
+}
+
+.mypage__setting__wrap .mypage__setting__box .mypage__setting__contentsBox .mypage__setting__right__user .usernameTitle__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.mypage__setting__wrap .mypage__setting__box .mypage__setting__contentsBox .mypage__setting__right__user .usernameTitle__box .usernameTitle {
+  font-size: 1.8rem;
+}
+
+.mypage__setting__wrap .mypage__setting__box .mypage__setting__contentsBox .mypage__setting__right__user .usernameTitle__box .usernameTitle__caution {
+  font-size: 1.2rem;
+  margin-left: 20px;
+}
+
+.mypage__setting__wrap .mypage__setting__box .mypage__setting__contentsBox .mypage__setting__right__user .username_input, .mypage__setting__wrap .mypage__setting__box .mypage__setting__contentsBox .mypage__setting__right__user .name_input {
+  width: 300px;
+  height: 30px;
+  font-size: 1.8rem;
+  border-bottom: 2px solid #707070;
+  margin-top: 10px;
+}
+
+.mypage__setting__wrap .mypage__setting__box .mypage__setting__contentsBox .mypage__setting__right__user .nameTitle__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  margin-top: 40px;
+}
+
+.mypage__setting__wrap .mypage__setting__box .mypage__setting__contentsBox .mypage__setting__right__user .nameTitle__box .nameTitle {
+  font-size: 1.8rem;
+}
+
+.mypage__setting__wrap .mypage__setting__box .mypage__setting__contentsBox .mypage__setting__right__user .nameTitle__box .nameTitle__caution {
+  font-size: 1.2rem;
+  margin-left: 20px;
+}
+
+.mypage__setting__wrap .mypage__setting__box .mypage__setting__contentsBox .mypage__setting__right__user .selectType__box .selectTypeTitleBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  margin-top: 40px;
+}
+
+.mypage__setting__wrap .mypage__setting__box .mypage__setting__contentsBox .mypage__setting__right__user .selectType__box .selectTypeTitleBox .selectTypeTitle {
+  font-size: 1.8rem;
+}
+
+.mypage__setting__wrap .mypage__setting__box .mypage__setting__contentsBox .mypage__setting__right__user .selectType__box .selectTypeTitleBox .selectType__caution {
+  font-size: 1.2rem;
+  margin-left: 20px;
+}
+
+.mypage__setting__wrap .mypage__setting__box .mypage__setting__contentsBox .mypage__setting__right__user .selectType__contentsBox .selectType__inputBox1 {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 15px;
+}
+
+.mypage__setting__wrap .mypage__setting__box .mypage__setting__contentsBox .mypage__setting__right__user .selectType__contentsBox .selectType__inputBox1 label {
+  cursor: pointer;
+  font-size: 1.6rem;
+}
+
+.mypage__setting__wrap .mypage__setting__box .mypage__setting__contentsBox .mypage__setting__right__user .selectType__contentsBox .selectType__inputBox1 label input {
+  display: none;
+}
+
+.mypage__setting__wrap .mypage__setting__box .mypage__setting__contentsBox .mypage__setting__right__user .selectType__contentsBox .selectType__inputBox1 label span {
+  padding-left: 20px;
+  position: relative;
+  margin-right: 20px;
+}
+
+.mypage__setting__wrap .mypage__setting__box .mypage__setting__contentsBox .mypage__setting__right__user .selectType__contentsBox .selectType__inputBox1 label span::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #999;
+  border-radius: 4px;
+}
+
+.mypage__setting__wrap .mypage__setting__box .mypage__setting__contentsBox .mypage__setting__right__user .selectType__contentsBox .selectType__inputBox1 label input:checked + span {
+  color: #B4BF5E;
+}
+
+.mypage__setting__wrap .mypage__setting__box .mypage__setting__contentsBox .mypage__setting__right__user .selectType__contentsBox .selectType__inputBox1 label input:checked + span::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: 5px;
+  width: 7px;
+  height: 14px;
+  -webkit-transform: rotate(40deg);
+      -ms-transform: rotate(40deg);
+          transform: rotate(40deg);
+  border-bottom: 3px solid #B4BF5E;
+  border-right: 3px solid #B4BF5E;
+}
+
+.mypage__setting__wrap .mypage__setting__box .mypage__setting__contentsBox .mypage__setting__right__user .selectType__contentsBox .selectType__inputBox2 {
+  margin-top: 20px;
+  position: relative;
+}
+
+.mypage__setting__wrap .mypage__setting__box .mypage__setting__contentsBox .mypage__setting__right__user .selectType__contentsBox .selectType__inputBox2 label {
+  cursor: pointer;
+}
+
+.mypage__setting__wrap .mypage__setting__box .mypage__setting__contentsBox .mypage__setting__right__user .selectType__contentsBox .selectType__inputBox2 label input {
+  display: none;
+}
+
+.mypage__setting__wrap .mypage__setting__box .mypage__setting__contentsBox .mypage__setting__right__user .selectType__contentsBox .selectType__inputBox2 label span {
+  font-size: 1.6rem;
+  padding-left: 20px;
+  position: relative;
+  margin-right: 20px;
+}
+
+.mypage__setting__wrap .mypage__setting__box .mypage__setting__contentsBox .mypage__setting__right__user .selectType__contentsBox .selectType__inputBox2 label span::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #999;
+  border-radius: 4px;
+}
+
+.mypage__setting__wrap .mypage__setting__box .mypage__setting__contentsBox .mypage__setting__right__user .selectType__contentsBox .selectType__inputBox2 label input:checked + span {
+  color: #B4BF5E;
+}
+
+.mypage__setting__wrap .mypage__setting__box .mypage__setting__contentsBox .mypage__setting__right__user .selectType__contentsBox .selectType__inputBox2 label input:checked + span::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: 5px;
+  width: 7px;
+  height: 14px;
+  -webkit-transform: rotate(40deg);
+      -ms-transform: rotate(40deg);
+          transform: rotate(40deg);
+  border-bottom: 3px solid #B4BF5E;
+  border-right: 3px solid #B4BF5E;
+}
+
+.mypage__setting__wrap .mypage__setting__box .mypage__setting__contentsBox .mypage__setting__right__mail {
+  display: none;
+  width: 600px;
+  padding-left: 100px;
+}
+
+.mypage__setting__wrap .mypage__setting__box .mypage__setting__contentsBox .mypage__setting__right__mail .mailTitle {
+  font-size: 1.8rem;
+}
+
+.mypage__setting__wrap .mypage__setting__box .mypage__setting__contentsBox .mypage__setting__right__mail .mailCurrent__box {
+  font-size: 1.6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 20px;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.mypage__setting__wrap .mypage__setting__box .mypage__setting__contentsBox .mypage__setting__right__mail .mailCurrent__box .mailCurrent__bar {
+  padding: 0 5px;
+}
+
+.mypage__setting__wrap .mypage__setting__box .mypage__setting__contentsBox .mypage__setting__right__mail input.mailNew__input {
+  width: 300px;
+  height: 30px;
+  font-size: 1.8rem;
+  border-bottom: 2px solid #707070;
+  margin-top: 20px;
+}
+
+.mypage__setting__wrap .mypage__setting__box .mypage__setting__contentsBox .mypage__setting__right__mail input.mailNew__input::-webkit-input-placeholder {
+  color: #BEBEBE;
+}
+
+.mypage__setting__wrap .mypage__setting__box .mypage__setting__contentsBox .mypage__setting__right__mail input.mailNew__input::-moz-placeholder {
+  color: #BEBEBE;
+}
+
+.mypage__setting__wrap .mypage__setting__box .mypage__setting__contentsBox .mypage__setting__right__mail input.mailNew__input:-ms-input-placeholder {
+  color: #BEBEBE;
+}
+
+.mypage__setting__wrap .mypage__setting__box .mypage__setting__contentsBox .mypage__setting__right__mail input.mailNew__input::-ms-input-placeholder {
+  color: #BEBEBE;
+}
+
+.mypage__setting__wrap .mypage__setting__box .mypage__setting__contentsBox .mypage__setting__right__mail input.mailNew__input::placeholder {
+  color: #BEBEBE;
+}
+
+.mypage__setting__wrap .mypage__setting__box .mypage__setting__contentsBox .mypage__setting__right__password {
+  display: none;
+  width: 600px;
+  padding-left: 100px;
+}
+
+.mypage__setting__wrap .mypage__setting__box .mypage__setting__contentsBox .mypage__setting__right__password .passwordTitle {
+  font-size: 1.8rem;
+}
+
+.mypage__setting__wrap .mypage__setting__box .mypage__setting__contentsBox .mypage__setting__right__password input.passwordCurrent__input, .mypage__setting__wrap .mypage__setting__box .mypage__setting__contentsBox .mypage__setting__right__password input.passwordNew__input {
+  width: 300px;
+  height: 30px;
+  font-size: 1.8rem;
+  border-bottom: 2px solid #707070;
+  margin-top: 20px;
+}
+
+.mypage__setting__wrap .mypage__setting__box .mypage__setting__contentsBox .mypage__setting__right__password input.passwordCurrent__input::-webkit-input-placeholder, .mypage__setting__wrap .mypage__setting__box .mypage__setting__contentsBox .mypage__setting__right__password input.passwordNew__input::-webkit-input-placeholder {
+  color: #BEBEBE;
+}
+
+.mypage__setting__wrap .mypage__setting__box .mypage__setting__contentsBox .mypage__setting__right__password input.passwordCurrent__input::-moz-placeholder, .mypage__setting__wrap .mypage__setting__box .mypage__setting__contentsBox .mypage__setting__right__password input.passwordNew__input::-moz-placeholder {
+  color: #BEBEBE;
+}
+
+.mypage__setting__wrap .mypage__setting__box .mypage__setting__contentsBox .mypage__setting__right__password input.passwordCurrent__input:-ms-input-placeholder, .mypage__setting__wrap .mypage__setting__box .mypage__setting__contentsBox .mypage__setting__right__password input.passwordNew__input:-ms-input-placeholder {
+  color: #BEBEBE;
+}
+
+.mypage__setting__wrap .mypage__setting__box .mypage__setting__contentsBox .mypage__setting__right__password input.passwordCurrent__input::-ms-input-placeholder, .mypage__setting__wrap .mypage__setting__box .mypage__setting__contentsBox .mypage__setting__right__password input.passwordNew__input::-ms-input-placeholder {
+  color: #BEBEBE;
+}
+
+.mypage__setting__wrap .mypage__setting__box .mypage__setting__contentsBox .mypage__setting__right__password input.passwordCurrent__input::placeholder, .mypage__setting__wrap .mypage__setting__box .mypage__setting__contentsBox .mypage__setting__right__password input.passwordNew__input::placeholder {
+  color: #BEBEBE;
+}
+
+.mypage__setting__wrap .mypage__setting__box .mypage__setting__contentsBox .save {
+  cursor: pointer;
+  display: block;
+  width: 200px;
+  height: 30px;
+  font-size: 1.6rem;
+  background-color: #F2797E;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 30px;
+  margin: 50px auto 0 auto;
+}

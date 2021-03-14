@@ -1,0 +1,41 @@
+/* 絞りの数 */
+.index__search__navi>ul li{
+    position: relative;
+}
+  
+.index__search__navi>ul li .optionNum{
+    position: absolute;
+    top: -1rem;
+    right: 0.5rem;
+    display: block;
+    border-radius: 50%;
+    color: #fff;
+    text-align: center;
+    line-height: 2rem;
+    font-size: 1rem;
+}
+  
+.optionNumChoose{
+    width: 2rem;
+    height: 2rem;
+    background: #F2A679;
+}
+
+/* ジャンル切り替え */
+.index__search__wrap .index__search .index__search__right .index__search__navi ul .listChoose {
+    background-color: #B4BF5E;
+    color: #FFFFFF;
+}
+
+.searchListView {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  
+.searchListHidden {
+    display: none;
+}
+  

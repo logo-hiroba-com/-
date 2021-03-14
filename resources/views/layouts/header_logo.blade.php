@@ -1,27 +1,24 @@
-<header id="header">
 <div class="header__top">
     <div class="header__top__contents">
-    <div class="header__top__contents__left"><a class="header__logo" href="{{ route('logos.index') }}"><img src="{{asset('img/header_logo.png')}}" alt="ロゴひろば"></a>
-        <div class="header__search">
-        <input class="header__search__text" type="text" name="search" placeholder="ロゴを探す">
-        <input class="header__saerch__btn" type="submit" value="">
+        <div class="header__top__contents__left"><a class="header__logo" href="{{ route('logos.index') }}"><img src="{{asset('img/header_logo.png')}}" alt="ロゴひろば"></a>
+            <div class="header__search">
+            <input class="header__search__text" type="text" name="search" placeholder="ロゴを探す">
+            <input class="header__saerch__btn" type="submit" value="">
+            </div>
         </div>
-    </div>
-    <div class="header__top__contents__right">
-        <a class="header__a__mail" href="{{ route('logos.index') }}">
-        <div class="header__mail"><img class="mail" src="{{asset('img/headrer_icon_mail.png')}}" alt="お問い合わせ">
-            <p>お問い合わせ</p>
-        </div></a>
         @if(Session::has('user_datas'))
-            <a class="header__a__login" href="{{ route('userlogout') }}">
-            <div class="header__login"><p>{{session('user_datas')["username"]}}</p></div></a>
+            <a class="header__a__login" href="{{ route('setting.index') }}">
+                <div class="header__login">
+                    <p>マイページ</p>
+                </div>
+            </a>
         @else
             <a class="header__a__login" href="{{ route('userlogin') }}">
-            <div class="header__login"><img src="{{asset('img/header_icon_login.png')}}" alt="ログイン">
-                <p>ログイン</p>
-            </div></a>
+                <div class="header__login">
+                    <p>ログイン/登録</p>
+                </div>
+            </a>
         @endif
-    </div>
     </div>
 </div>
 <nav class="header__nav">
@@ -57,5 +54,3 @@
         </div>
         </li></a></ul>
 </nav>
-
-</header>

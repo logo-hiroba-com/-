@@ -1,0 +1,521 @@
+@charset "UTF-8";
+
+html {
+  font-size: 62.5%;
+  font-family: 'Roboto', sans-serif;
+  color: #333333;
+}
+
+body {
+  font-size: 62.5%;
+  color: #333333;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.mypage__menu__wrap {
+  height: 725px;
+}
+
+.mypage__menu__wrap .mypage__menu__box {
+  width: 400px;
+  height: 725px;
+  background-color: #F8F8F8;
+}
+
+.mypage__menu__wrap .mypage__menu__box .mypage__menu__typeChangeBox {
+  display: -webkit-box;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  padding-top: 30px;
+}
+
+.mypage__menu__wrap .mypage__menu__box .mypage__menu__typeChangeBox .mypage__menu__usertype {
+  font-size: 1.5rem;
+  margin-right: 20px;
+  color: #707070;
+}
+
+.mypage__menu__wrap .mypage__menu__box .mypage__menu__typeChangeBox a {
+  text-decoration: none;
+  color: #333333;
+}
+
+.mypage__menu__wrap .mypage__menu__box .mypage__menu__typeChangeBox a .mypage__menu__typeChangeBT {
+  font-size: 1.5rem;
+  margin-right: 30px;
+  cursor: pointer;
+  color: #707070;
+}
+
+.mypage__menu__wrap .mypage__menu__box .mypage__menu__nameTitle {
+  font-size: 1.2rem;
+  margin-top: 30px;
+  margin-left: 50px;
+  margin-bottom: 10px;
+  color: #707070;
+}
+
+.mypage__menu__wrap .mypage__menu__box .mypage__menu__name {
+  font-size: 2.4rem;
+  margin-left: 50px;
+  color: #707070;
+}
+
+.mypage__menu__wrap .mypage__menu__box ul.mypage__menu__BtBox {
+  margin-top: 40px;
+}
+
+.mypage__menu__wrap .mypage__menu__box ul.mypage__menu__BtBox a {
+  text-decoration: none;
+  color: #333333;
+}
+
+.mypage__menu__wrap .mypage__menu__box ul.mypage__menu__BtBox a:last-child {
+  background-color: red;
+}
+
+.mypage__menu__wrap .mypage__menu__box ul.mypage__menu__BtBox a:last-child::after {
+  content: "";
+  display: block;
+  width: 400px;
+  height: 1px;
+  background-color: #707070;
+  position: relative;
+  bottom: 0;
+}
+
+.mypage__menu__wrap .mypage__menu__box ul.mypage__menu__BtBox li {
+  height: 65px;
+  list-style-type: none;
+}
+
+.mypage__menu__wrap .mypage__menu__box ul.mypage__menu__BtBox li:hover {
+  background-color: white;
+  cursor: pointer;
+}
+
+.mypage__menu__wrap .mypage__menu__box ul.mypage__menu__BtBox li::before {
+  content: "";
+  display: block;
+  width: 400px;
+  height: 1px;
+  background-color: #707070;
+  position: relative;
+  top: 0;
+}
+
+.mypage__menu__wrap .mypage__menu__box ul.mypage__menu__BtBox li .mypage__menu__BtContentsBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.mypage__menu__wrap .mypage__menu__box ul.mypage__menu__BtBox li .mypage__menu__BtContentsBox img {
+  line-height: 65px;
+  margin-left: 50px;
+}
+
+.mypage__menu__wrap .mypage__menu__box ul.mypage__menu__BtBox li .mypage__menu__BtContentsBox div {
+  line-height: 65px;
+  margin-left: 25px;
+  font-size: 2.0rem;
+  color: #707070;
+}
+
+.mypage__menu__wrap .mypage__menu__box ul.mypage__menu__BtBox li .mypage__menu__BtContentsBox .mypage__menu__newsBtMark {
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #EB5050;
+  margin: auto 0 auto 15px;
+}
+
+.mypage__menu__wrap .mypage__menu__box .mypage__menu__AdBox {
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.mypage__menu__wrap .mypage__menu__box .mypage__menu__AdBox div {
+  text-align: center;
+}
+
+.mypage__menu__wrap .mypage__menu__box .mypage__menu__AdBox div:last-child {
+  margin-top: 30px;
+}
+
+.mypage__menu__wrap .mypage__menu__box .mypage__menu__AdBox div img {
+  width: 250px;
+}
+
+.mypage__historyDt__wrap {
+  width: 100%;
+  height: 725px;
+  overflow-y: hidden;
+}
+
+.mypage__historyDt__wrap .mypage__historyDt__box {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.mypage__historyDt__wrap .mypage__historyDt__box .mypage__historyDt__titleBox {
+  position: absolute;
+  z-index: 10;
+  display: block;
+  width: 800px;
+  height: 100px;
+  background-color: white;
+}
+
+.mypage__historyDt__wrap .mypage__historyDt__box .mypage__historyDt__titleBox h1 {
+  font-size: 2.0rem;
+  padding-top: 40px;
+  text-align: center;
+  padding-right: 15px;
+}
+
+.mypage__historyDt__wrap .mypage__historyDt__box .myoage__historyDt__box {
+  width: 800px;
+  padding-top: 90px;
+  margin: 0 auto;
+}
+
+.mypage__historyDt__wrap .mypage__historyDt__box .myoage__historyDt__box h2.myoage__historyDt__title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+.mypage__historyDt__wrap .mypage__historyDt__box .myoage__historyDt__box .myoage__historyDt__idrepBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 10px;
+}
+
+.mypage__historyDt__wrap .mypage__historyDt__box .myoage__historyDt__box .myoage__historyDt__idrepBox .myoage__historyDt__idbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #707070;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+}
+
+.mypage__historyDt__wrap .mypage__historyDt__box .myoage__historyDt__box .myoage__historyDt__idrepBox .myoage__historyDt__idbox .myoage__historyDt__idtemp {
+  margin-right: 5px;
+}
+
+.mypage__historyDt__wrap .mypage__historyDt__box .myoage__historyDt__box .myoage__historyDt__comtent {
+  height: 680px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 20px;
+}
+
+.mypage__historyDt__wrap .mypage__historyDt__box .myoage__historyDt__box .myoage__historyDt__comtent .myoage__historyDt__left {
+  width: 568px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.mypage__historyDt__wrap .mypage__historyDt__box .myoage__historyDt__box .myoage__historyDt__comtent .myoage__historyDt__left img.myoage__historyDt__img {
+  width: 330px;
+  height: 330px;
+}
+
+.mypage__historyDt__wrap .mypage__historyDt__box .myoage__historyDt__box .myoage__historyDt__comtent .myoage__historyDt__left .myoage__historyDt_sampleimg ul {
+  width: 330px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 12px;
+}
+
+.mypage__historyDt__wrap .mypage__historyDt__box .myoage__historyDt__box .myoage__historyDt__comtent .myoage__historyDt__left .myoage__historyDt_sampleimg ul li {
+  list-style: none;
+}
+
+.mypage__historyDt__wrap .mypage__historyDt__box .myoage__historyDt__box .myoage__historyDt__comtent .myoage__historyDt__left .myoage__historyDt_sampleimg ul li div {
+  width: 100px;
+  height: 100px;
+  background-color: #ccc;
+}
+
+.mypage__historyDt__wrap .mypage__historyDt__box .myoage__historyDt__box .myoage__historyDt__comtent .myoage__historyDt__right {
+  margin-left: 42px;
+  width: 590px;
+}
+
+.mypage__historyDt__wrap .mypage__historyDt__box .myoage__historyDt__box .myoage__historyDt__comtent .myoage__historyDt__right ul {
+  height: 150px;
+}
+
+.mypage__historyDt__wrap .mypage__historyDt__box .myoage__historyDt__box .myoage__historyDt__comtent .myoage__historyDt__right ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 25px;
+  list-style: none;
+  margin-bottom: 15px;
+}
+
+.mypage__historyDt__wrap .mypage__historyDt__box .myoage__historyDt__box .myoage__historyDt__comtent .myoage__historyDt__right ul li .myoage__historyDt__selectbox {
+  display: block;
+  width: 70px;
+  height: 25px;
+  font-size: 1.4rem;
+  background-color: #707070;
+  text-align: center;
+  line-height: 25px;
+  color: #ffffff;
+  margin-right: 15px;
+}
+
+.mypage__historyDt__wrap .mypage__historyDt__box .myoage__historyDt__box .myoage__historyDt__comtent .myoage__historyDt__right ul li .myoage__historyDt__selecttext {
+  height: 23px;
+  margin: auto 0;
+  display: block;
+  line-height: 23px;
+  font-size: 1.4rem;
+  color: #333333;
+  border-bottom: 1px solid #333333;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.mypage__historyDt__wrap .mypage__historyDt__box .myoage__historyDt__box .myoage__historyDt__comtent .myoage__historyDt__right .myoage__historyDt__conceptBox {
+  height: 120px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.mypage__historyDt__wrap .mypage__historyDt__box .myoage__historyDt__box .myoage__historyDt__comtent .myoage__historyDt__right .myoage__historyDt__conceptBox p.myoage__historyDt__conceptTitle {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.mypage__historyDt__wrap .mypage__historyDt__box .myoage__historyDt__box .myoage__historyDt__comtent .myoage__historyDt__right .myoage__historyDt__conceptBox p.myoage__historyDt__concepyText {
+  font-size: 1.4rem;
+  line-height: 2.5rem;
+  margin-top: 7px;
+}
+
+.mypage__historyDt__wrap .mypage__historyDt__box .myoage__historyDt__box .myoage__historyDt__comtent .myoage__historyDt__right .myoage__historyDt__priceBox {
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.mypage__historyDt__wrap .mypage__historyDt__box .myoage__historyDt__box .myoage__historyDt__comtent .myoage__historyDt__right .myoage__historyDt__priceBox .myoage__historyDt__price {
+  font-size: 2.1rem;
+  font-weight: bold;
+}
+
+.mypage__historyDt__wrap .mypage__historyDt__box .myoage__historyDt__box .myoage__historyDt__comtent .myoage__historyDt__right .myoage__historyDt__priceBox .myoage__historyDt__tax {
+  font-size: 1.4rem;
+  margin-left: 5px;
+  font-weight: normal;
+}
+
+.mypage__historyDt__wrap .mypage__historyDt__box .myoage__historyDt__box .myoage__historyDt__comtent .myoage__historyDt__right .myoage__historyDt__buybtn {
+  height: 70px;
+  font-size: 1.6rem;
+  color: white;
+  text-align: center;
+  line-height: 70px;
+  background-color: #F279AC;
+  cursor: pointer;
+}
+
+.footer__information {
+  background-color: #F8F8F8;
+  border: 1px solid #E5E5E5;
+  padding-top: 50px;
+  padding-bottom: 80px;
+}
+
+.footer__information .footer__information__box {
+  width: 1200px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__information .footer__information__box .footer__information__left {
+  width: 60%;
+}
+
+.footer__information .footer__information__box .footer__information__left p {
+  display: block;
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+}
+
+.footer__information .footer__information__box .footer__information__left p:first-child {
+  width: 200px;
+  background: url(../img/index_information_price.png) no-repeat 2px center;
+  font-weight: bold;
+  padding-left: 35px;
+  margin-bottom: 20px;
+}
+
+.footer__information .footer__information__box .footer__information__left p:last-child {
+  color: #BEBEBE;
+  padding-right: 50px;
+}
+
+.footer__information .footer__information__box .footer__information__right {
+  display: block;
+  width: 40%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer__information .footer__information__box .footer__information__right img.logo__midium {
+  width: 279px;
+  height: 66px;
+  margin: 0 auto 40px auto;
+}
+
+.footer__information .footer__information__box .footer__information__mail {
+  width: 380px;
+  height: 174px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #ffffff;
+  border: 1px solid #E5E5E5;
+  padding: 30px 20px;
+}
+
+.footer__information .footer__information__box .footer__information__mail p {
+  font-size: 1.5rem;
+  line-height: 2.0rem;
+}
+
+.footer__information .footer__information__box .footer__information__mail p:first-child {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer__information .footer__information__box .footer__information__mail a {
+  text-decoration: none;
+}
+
+.footer__information .footer__information__box .footer__information__mail a .footer__information__mail__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  width: 170px;
+  height: 44px;
+  line-height: 44px;
+  background-color: #F2A679;
+  border-radius: 10px;
+  margin: 20px auto 0 auto;
+}
+
+.footer__information .footer__information__box .footer__information__mail a .footer__information__mail__btn:hover {
+  opacity: 0.7;
+}
+
+.footer__information .footer__information__box .footer__information__mail a .footer__information__mail__btn img.mail {
+  height: 16px;
+  margin: auto 10px auto 15px;
+}
+
+.footer__information .footer__information__box .footer__information__mail a .footer__information__mail__btn p {
+  font-size: 1.6rem;
+  line-height: 44px;
+  color: #FFFFFF;
+  font-family: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
+  font-weight: normal;
+  padding-left: 5px;
+}
+
+.footer__sitemap_wrap {
+  background-color: #505050;
+  padding: 20px 0;
+}
+
+.footer__sitemap_wrap .footer__sitemap_box {
+  position: relative;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.footer__sitemap_wrap .footer__sitemap_box ul {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.footer__sitemap_wrap .footer__sitemap_box ul a {
+  text-decoration: none;
+}
+
+.footer__sitemap_wrap .footer__sitemap_box ul a li {
+  font-size: 1.2rem;
+  display: inline-block;
+  color: #FFFFFF;
+  margin: 0 10px;
+}
+
+.footer__sitemap_wrap .footer__sitemap_box a.footr__back__top__link .footr__back__top {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  display: block;
+  border-radius: 50%;
+  background-color: #333333;
+  text-align: center;
+  line-height: 70px;
+  right: 0;
+  bottom: 8px;
+}
+
+.footer__copyright {
+  background-color: #333333;
+  text-align: center;
+  padding: 7px 0;
+}
+
+.footer__copyright small {
+  color: #ffffff;
+  font-size: 1.2rem;
+}

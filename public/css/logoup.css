@@ -1,0 +1,1807 @@
+@charset "UTF-8";
+/*!
+ * ress.css • v1.1.2
+ * MIT License
+ * github.com/filipelinhares/ress
+ */
+/* # =================================================================
+   # Global selectors
+   # ================================================================= */
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow-y: scroll;
+  /* All browsers without overlaying scrollbars */
+  -webkit-text-size-adjust: 100%;
+  /* iOS 8+ */
+}
+
+*,
+::before,
+::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+::before,
+::after {
+  text-decoration: inherit;
+  /* Inherit text-decoration and vertical align to ::before and ::after pseudo elements */
+  vertical-align: inherit;
+}
+
+/* Remove margin, padding of all elements and set background-no-repeat as default */
+* {
+  background-repeat: no-repeat;
+  /* Set `background-repeat: no-repeat` to all elements */
+  padding: 0;
+  /* Reset `padding` and `margin` of all elements */
+  margin: 0;
+}
+
+/* # =================================================================
+   # General elements
+   # ================================================================= */
+/* Add the correct display in iOS 4-7.*/
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+hr {
+  overflow: visible;
+  /* Show the overflow in Edge and IE */
+}
+
+/*
+* Correct `block` display not defined for any HTML5 element in IE 8/9
+* Correct `block` display not defined for `details` or `summary` in IE 10/11
+* and Firefox
+* Correct `block` display not defined for `main` in IE 11
+*/
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+summary {
+  display: list-item;
+  /* Add the correct display in all browsers */
+}
+
+small {
+  font-size: 80%;
+  /* Set font-size to 80% in `small` elements */
+}
+
+[hidden],
+template {
+  display: none;
+  /* Add the correct display in IE */
+}
+
+abbr[title] {
+  border-bottom: 1px dotted;
+  /* Add a bordered underline effect in all browsers */
+  text-decoration: none;
+  /* Remove text decoration in Firefox 40+ */
+}
+
+a {
+  background-color: transparent;
+  /* Remove the gray background on active links in IE 10 */
+  -webkit-text-decoration-skip: objects;
+  /* Remove gaps in links underline in iOS 8+ and Safari 8+ */
+}
+
+a:active,
+a:hover {
+  outline-width: 0;
+  /* Remove the outline when hovering in all browsers */
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  /* Specify the font family of code elements */
+}
+
+b,
+strong {
+  font-weight: bolder;
+  /* Correct style set to `bold` in Edge 12+, Safari 6.2+, and Chrome 18+ */
+}
+
+dfn {
+  font-style: italic;
+  /* Address styling not present in Safari and Chrome */
+}
+
+/* Address styling not present in IE 8/9 */
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+/* https://gist.github.com/unruthless/413930 */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* # =================================================================
+   # Forms
+   # ================================================================= */
+input {
+  border-radius: 0;
+}
+
+/* Apply cursor pointer to button elements */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"],
+[role="button"] {
+  cursor: pointer;
+}
+
+/* Replace pointer cursor in disabled elements */
+[disabled] {
+  cursor: default;
+}
+
+[type="number"] {
+  width: auto;
+  /* Firefox 36+ */
+}
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* Safari 8+ */
+}
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+  /* Safari 8 */
+}
+
+textarea {
+  overflow: auto;
+  /* Internet Explorer 11+ */
+  resize: vertical;
+  /* Specify textarea resizability */
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font: inherit;
+  /* Specify font inheritance of form elements */
+}
+
+optgroup {
+  font-weight: bold;
+  /* Restore the font weight unset by the previous rule. */
+}
+
+button {
+  overflow: visible;
+  /* Address `overflow` set to `hidden` in IE 8/9/10/11 */
+}
+
+/* Remove inner padding and border in Firefox 4+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: 0;
+  padding: 0;
+}
+
+/* Replace focus style removed in the border reset above */
+button:-moz-focusring,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  outline: 1px dotted ButtonText;
+}
+
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* Correct the inability to style clickable types in iOS */
+}
+
+button,
+select {
+  text-transform: none;
+  /* Firefox 40+, Internet Explorer 11- */
+}
+
+/* Remove the default button styling in all browsers */
+button,
+input,
+select,
+textarea {
+  background-color: transparent;
+  border-style: none;
+  color: inherit;
+}
+
+/* Style select like a standard input */
+select {
+  -moz-appearance: none;
+  /* Firefox 36+ */
+  -webkit-appearance: none;
+  /* Chrome 41+ */
+}
+
+select::-ms-expand {
+  display: none;
+  /* Internet Explorer 11+ */
+}
+
+select::-ms-value {
+  color: currentColor;
+  /* Internet Explorer 11+ */
+}
+
+legend {
+  border: 0;
+  /* Correct `color` not being inherited in IE 8/9/10/11 */
+  color: inherit;
+  /* Correct the color inheritance from `fieldset` elements in IE */
+  display: table;
+  /* Correct the text wrapping in Edge and IE */
+  max-width: 100%;
+  /* Correct the text wrapping in Edge and IE */
+  white-space: normal;
+  /* Correct the text wrapping in Edge and IE */
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* Correct the inability to style clickable types in iOS and Safari */
+  font: inherit;
+  /* Change font properties to `inherit` in Chrome and Safari */
+}
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* Correct the odd appearance in Chrome and Safari */
+  outline-offset: -2px;
+  /* Correct the outline style in Safari */
+}
+
+/* # =================================================================
+   # Specify media element style
+   # ================================================================= */
+img {
+  border-style: none;
+  /* Remove border when inside `a` element in IE 8/9/10 */
+}
+
+/* Add the correct vertical alignment in Chrome, Firefox, and Opera */
+progress {
+  vertical-align: baseline;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+  /* Internet Explorer 11- */
+}
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* Internet Explorer 11+, Windows Phone 8.1+ */
+}
+
+/* # =================================================================
+   # Accessibility
+   # ================================================================= */
+/* Hide content from screens but not screenreaders */
+@media screen {
+  [hidden~="screen"] {
+    display: inherit;
+  }
+  [hidden~="screen"]:not(:active):not(:focus):not(:target) {
+    position: absolute !important;
+    clip: rect(0 0 0 0) !important;
+  }
+}
+
+/* Specify the progress cursor of updating elements */
+[aria-busy="true"] {
+  cursor: progress;
+}
+
+/* Specify the pointer cursor of trigger elements */
+[aria-controls] {
+  cursor: pointer;
+}
+
+/* Specify the unstyled cursor of disabled, not-editable, or otherwise inoperable elements */
+[aria-disabled] {
+  cursor: default;
+}
+
+/* # =================================================================
+   # Selection
+   # ================================================================= */
+/* Specify text selection background color and omit drop shadow */
+::-moz-selection {
+  background-color: #b3d4fc;
+  /* Required when declaring ::selection */
+  color: #000;
+  text-shadow: none;
+}
+
+::selection {
+  background-color: #b3d4fc;
+  /* Required when declaring ::selection */
+  color: #000;
+  text-shadow: none;
+}
+
+.None {
+  display: none;
+}
+
+.On {
+  display: block;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'M PLUS 1p', sans-serif;
+  color: #333333;
+}
+
+body {
+  font-size: 62.5%;
+  color: #333333;
+}
+
+.header__top {
+  width: auto;
+  height: 80px;
+  background-color: #F8F8F8;
+  border: 1px solid #EAEAEA;
+}
+
+.header__top .header__top__contents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 1200px;
+  height: 80px;
+  margin: 0 auto;
+}
+
+.header__top .header__top__contents .header__top__contents__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.header__top .header__top__contents .header__top__contents__left a.header__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 80px;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.header__top .header__top__contents .header__top__contents__left a.header__logo img {
+  margin: auto 0;
+  height: 40px;
+}
+
+.header__top .header__top__contents .header__top__contents__left .header__search {
+  background-color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 300px;
+  height: 44px;
+  border: 1px solid #E5E5E5;
+  border-radius: 10px;
+  margin: auto 0 auto 24px;
+}
+
+.header__top .header__top__contents .header__top__contents__left .header__search .header__search__text {
+  width: 80%;
+  line-height: 44px;
+  color: #333333;
+  font-size: 1.6rem;
+  font-family: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
+  padding-left: 15px;
+}
+
+.header__top .header__top__contents .header__top__contents__left .header__search .header__search__text::-moz-placeholder {
+  opacity: 0.3;
+}
+
+.header__top .header__top__contents .header__top__contents__left .header__search .header__saerch__btn {
+  display: inline-block;
+  width: 20%;
+  height: 100%;
+  background-color: #BEBEBE;
+  background-image: url(../img/header_icon_search.png);
+  background-position: center;
+  border-radius: 0 10px 10px 0;
+}
+
+.header__top .header__top__contents a.header__a__login {
+  text-decoration: none;
+  margin: auto 0;
+}
+
+.header__top .header__top__contents a.header__a__login .header__login {
+  display: block;
+  width: 120px;
+  height: 44px;
+  line-height: 44px;
+  background-color: #F2A679;
+  border-radius: 10px;
+  margin: auto 0;
+}
+
+.header__top .header__top__contents a.header__a__login .header__login:hover {
+  opacity: 0.7;
+}
+
+.header__top .header__top__contents a.header__a__login .header__login p {
+  font-size: 1.6rem;
+  color: #FFFFFF;
+  font-weight: normal;
+  text-align: center;
+}
+
+.header__nav {
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header__nav .header__nav__ul {
+  width: 1200px;
+  height: 100%;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header__nav .header__nav__ul a {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-decoration: none;
+  color: #333333;
+}
+
+.header__nav .header__nav__ul a:hover li {
+  background-color: #E5E5E5;
+}
+
+.header__nav .header__nav__ul a:hover:nth-child(n+1):before {
+  content: '';
+  position: absolute;
+  height: 100px;
+  border: 2px solid #E5E5E5;
+  -webkit-transform: translate(198px, 0px);
+      -ms-transform: translate(198px, 0px);
+          transform: translate(198px, 0px);
+}
+
+.header__nav .header__nav__ul a:before {
+  content: '';
+  position: absolute;
+  height: 70px;
+  border: 1px solid #E5E5E5;
+  -webkit-transform: translateY(15px);
+      -ms-transform: translateY(15px);
+          transform: translateY(15px);
+}
+
+.header__nav .header__nav__ul a:last-child:after {
+  content: '';
+  position: absolute;
+  height: 70px;
+  border: 1px solid #E5E5E5;
+  -webkit-transform: translate(198px, 15px);
+      -ms-transform: translate(198px, 15px);
+          transform: translate(198px, 15px);
+}
+
+.header__nav .header__nav__ul a li {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  list-style-type: none;
+}
+
+.header__nav .header__nav__ul a li div {
+  width: 100%;
+  height: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: auto;
+  padding: 10px 0 10px 0;
+}
+
+.header__nav .header__nav__ul a li div img {
+  width: 24px;
+  height: 24px;
+  margin: auto;
+}
+
+.header__nav .header__nav__ul a li div p {
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.mypageD__menu__wrap {
+  height: 825px;
+}
+
+.mypageD__menu__wrap .mypageD__menu__box {
+  width: 400px;
+  height: 825px;
+  background-color: #F8F8F8;
+}
+
+.mypageD__menu__wrap .mypageD__menu__box .mypage__top__flexBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-top: 30px;
+}
+
+.mypageD__menu__wrap .mypageD__menu__box .mypage__top__flexBox .mypageD__menu__rankBox {
+  margin-left: 32px;
+}
+
+.mypageD__menu__wrap .mypageD__menu__box .mypage__top__flexBox .mypageD__menu__rankBox .mypageD__menu__rankTitle {
+  font-size: 1.4rem;
+}
+
+.mypageD__menu__wrap .mypageD__menu__box .mypage__top__flexBox .mypageD__menu__rankBox .mypageD__menu__rankImgBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 8px;
+  margin-left: 8px;
+}
+
+.mypageD__menu__wrap .mypageD__menu__box .mypage__top__flexBox .mypageD__menu__rankBox .mypageD__menu__rankBronzeBox, .mypageD__menu__wrap .mypageD__menu__box .mypage__top__flexBox .mypageD__menu__rankBox .mypageD__menu__rankSilverBox, .mypageD__menu__wrap .mypageD__menu__box .mypage__top__flexBox .mypageD__menu__rankBox .mypageD__menu__rankGoldBox {
+  position: relative;
+  display: block;
+  width: 42px;
+  height: 42px;
+  border: 3px solid #FFAA22;
+  border-radius: 50%;
+}
+
+.mypageD__menu__wrap .mypageD__menu__box .mypage__top__flexBox .mypageD__menu__rankBox .mypageD__menu__rankBronzeBox img, .mypageD__menu__wrap .mypageD__menu__box .mypage__top__flexBox .mypageD__menu__rankBox .mypageD__menu__rankSilverBox img, .mypageD__menu__wrap .mypageD__menu__box .mypage__top__flexBox .mypageD__menu__rankBox .mypageD__menu__rankGoldBox img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+  margin: auto;
+}
+
+.mypageD__menu__wrap .mypageD__menu__box .mypage__top__flexBox .mypageD__menu__rankBox .mypageD__menu__rankSilverBox {
+  border: 3px solid #F8F8F8;
+}
+
+.mypageD__menu__wrap .mypageD__menu__box .mypage__top__flexBox .mypageD__menu__rankBox .mypageD__menu__rankGoldBox {
+  border: 3px solid #F8F8F8;
+}
+
+.mypageD__menu__wrap .mypageD__menu__box .mypage__top__flexBox .mypageD__menu__rankBox img.mypageD__menu__rankBar {
+  padding: 0 5px;
+}
+
+.mypageD__menu__wrap .mypageD__menu__box .mypage__top__flexBox .mypageD__menu__rankBox .mypageD__menu__rankTextBox {
+  width: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 1.2rem;
+  margin-top: 5px;
+  padding: 0 3px;
+}
+
+.mypageD__menu__wrap .mypageD__menu__box .mypage__top__flexBox .mypageD__menu__typeChangeBox {
+  display: -webkit-box;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.mypageD__menu__wrap .mypageD__menu__box .mypage__top__flexBox .mypageD__menu__typeChangeBox .mypageD__menu__usertype {
+  font-size: 1.5rem;
+  margin-right: 20px;
+  color: #707070;
+}
+
+.mypageD__menu__wrap .mypageD__menu__box .mypage__top__flexBox .mypageD__menu__typeChangeBox a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mypageD__menu__wrap .mypageD__menu__box .mypage__top__flexBox .mypageD__menu__typeChangeBox a .mypageD__menu__typeChangeBT {
+  font-size: 1.5rem;
+  margin-right: 30px;
+  cursor: pointer;
+  color: #333333;
+}
+
+.mypageD__menu__wrap .mypageD__menu__box .mypageD__menu__flexBox2 {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-left: 32px;
+  margin-top: 30px;
+}
+
+.mypageD__menu__wrap .mypageD__menu__box .mypageD__menu__flexBox2 .mypageD__menu__nameBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mypageD__menu__wrap .mypageD__menu__box .mypageD__menu__flexBox2 .mypageD__menu__nameBox img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.mypageD__menu__wrap .mypageD__menu__box .mypageD__menu__flexBox2 .mypageD__menu__nameBox .mypageD__menu__name {
+  font-size: 2.2rem;
+  margin-left: 10px;
+  color: #707070;
+}
+
+.mypageD__menu__wrap .mypageD__menu__box .mypageD__menu__flexBox2 a {
+  margin-right: 20px;
+  text-decoration: none;
+}
+
+.mypageD__menu__wrap .mypageD__menu__box .mypageD__menu__flexBox2 a .mypage__menu_profedit {
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: #bebebe;
+  border-radius: 10px;
+  padding: 8px 10px;
+}
+
+.mypageD__menu__wrap .mypageD__menu__box .mypageD__menu__goodatBox {
+  margin-left: 32px;
+  margin-top: 20PX;
+}
+
+.mypageD__menu__wrap .mypageD__menu__box .mypageD__menu__goodatBox .mypageD__menu__goodatTitle {
+  font-size: 1.4rem;
+  color: #333333;
+  margin-top: 10PX;
+}
+
+.mypageD__menu__wrap .mypageD__menu__box .mypageD__menu__goodatBox .mypageD__menu__goodatFlexBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 8PX;
+}
+
+.mypageD__menu__wrap .mypageD__menu__box .mypageD__menu__goodatBox .mypageD__menu__goodatFlexBox .mypageD__menu__goodatText {
+  font-size: 1.6rem;
+  color: #707070;
+}
+
+.mypageD__menu__wrap .mypageD__menu__box .mypageD__menu__goodatBox .mypageD__menu__goodatFlexBox .mypageD__menu__goodatText:last-child {
+  margin-left: 20PX;
+}
+
+.mypageD__menu__wrap .mypageD__menu__box .mypageD__menu__prBox {
+  margin-left: 32px;
+  margin-top: 20PX;
+  overflow: hidden;
+}
+
+.mypageD__menu__wrap .mypageD__menu__box .mypageD__menu__prBox .mypageD__menu__prTitle {
+  font-size: 1.4rem;
+  color: #333333;
+  margin-top: 10PX;
+}
+
+.mypageD__menu__wrap .mypageD__menu__box .mypageD__menu__prBox .mypageD__menu__prText {
+  position: relative;
+  width: 367px;
+  height: 50px;
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+  color: #707070;
+  margin-top: 8px;
+  padding-right: 20px;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.mypageD__menu__wrap .mypageD__menu__box ul.mypageD__menu__BtBox {
+  margin-top: 19px;
+}
+
+.mypageD__menu__wrap .mypageD__menu__box ul.mypageD__menu__BtBox a {
+  text-decoration: none;
+  color: #333333;
+}
+
+.mypageD__menu__wrap .mypageD__menu__box ul.mypageD__menu__BtBox a:last-child {
+  background-color: red;
+}
+
+.mypageD__menu__wrap .mypageD__menu__box ul.mypageD__menu__BtBox a:last-child::after {
+  content: "";
+  display: block;
+  width: 400px;
+  height: 1px;
+  background-color: #707070;
+  position: relative;
+  bottom: 0;
+}
+
+.mypageD__menu__wrap .mypageD__menu__box ul.mypageD__menu__BtBox li {
+  height: 65px;
+  list-style-type: none;
+}
+
+.mypageD__menu__wrap .mypageD__menu__box ul.mypageD__menu__BtBox li:hover {
+  background-color: white;
+  cursor: pointer;
+}
+
+.mypageD__menu__wrap .mypageD__menu__box ul.mypageD__menu__BtBox li::before {
+  content: "";
+  display: block;
+  width: 400px;
+  height: 1px;
+  background-color: #707070;
+  position: relative;
+  top: 0;
+}
+
+.mypageD__menu__wrap .mypageD__menu__box ul.mypageD__menu__BtBox li .mypageD__menu__BtContentsBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.mypageD__menu__wrap .mypageD__menu__box ul.mypageD__menu__BtBox li .mypageD__menu__BtContentsBox img {
+  width: 24px;
+  line-height: 65px;
+  margin-left: 32px;
+}
+
+.mypageD__menu__wrap .mypageD__menu__box ul.mypageD__menu__BtBox li .mypageD__menu__BtContentsBox div {
+  line-height: 65px;
+  margin-left: 25px;
+  font-size: 1.8rem;
+  color: #707070;
+}
+
+.mypageD__menu__wrap .mypageD__menu__box ul.mypageD__menu__BtBox li .mypageD__menu__BtContentsBox .mypageD__menu__newsBtMark {
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #EB5050;
+  margin: auto 0 auto 15px;
+}
+
+.mypageD__post__wrap {
+  width: 100%;
+  min-height: 825px;
+}
+
+.mypageD__post__wrap .mypageD__post__box {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__titleBox {
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 60px;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__titleBox h1 {
+  font-size: 2.0rem;
+  text-align: center;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__menu1, .mypageD__post__wrap .mypageD__post__box .mypageD__post__menu2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__menu1 img, .mypageD__post__wrap .mypageD__post__box .mypageD__post__menu2 img {
+  width: 215px;
+  position: relative;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__menu1 img:nth-of-type(1), .mypageD__post__wrap .mypageD__post__box .mypageD__post__menu2 img:nth-of-type(1) {
+  z-index: 4;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__menu1 img:nth-of-type(2), .mypageD__post__wrap .mypageD__post__box .mypageD__post__menu2 img:nth-of-type(2) {
+  z-index: 3;
+  right: 20px;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__menu1 img:nth-of-type(3), .mypageD__post__wrap .mypageD__post__box .mypageD__post__menu2 img:nth-of-type(3) {
+  z-index: 2;
+  right: 40px;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__menu1 img:nth-of-type(4), .mypageD__post__wrap .mypageD__post__box .mypageD__post__menu2 img:nth-of-type(4) {
+  z-index: 1;
+  right: 60px;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__menu2 {
+  margin-top: 20px;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P1__imageBox .imageTitle {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #333333;
+  margin-top: 32px;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P1__imageBox .fileBox {
+  margin-top: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P1__imageBox .fileBox img {
+  width: 300px;
+  height: 300px;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P1__imageBox .fileBox label {
+  width: 250px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  color: #707070;
+  letter-spacing: 5px;
+  font-size: 1.6rem;
+  border: 1px solid #707070;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-left: 120px;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P1__imageBox .fileBox input {
+  display: none;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P1__logoTitleBox {
+  margin-top: 42px;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P1__logoTitleBox .logoTitle {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #333333;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P1__logoTitleBox input {
+  font-size: 1.8rem;
+  margin-top: 24px;
+  border-bottom: 1px solid #707070;
+  padding: 0 0 4px 16px;
+  color: #707070;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P2__colorWrap .colorTitle {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #333333;
+  margin-top: 32px;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P2__colorWrap .colorBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P2__colorWrap .colorBox input {
+  display: none;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P2__colorWrap .colorBox label {
+  display: block;
+  width: 72px;
+  height: 72px;
+  margin-top: 24px;
+  margin-right: 55px;
+  cursor: pointer;
+}
+
+/* .mypageD__post__wrap .mypageD__post__box .mypageD__post__P2__colorWrap .colorBox label:nth-of-type(1) {
+  background-color: #191919;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P2__colorWrap .colorBox label:nth-of-type(2) {
+  background-color: #818181;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P2__colorWrap .colorBox label:nth-of-type(3) {
+  background-color: #1BB1E8;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P2__colorWrap .colorBox label:nth-of-type(4) {
+  background-color: #1E388E;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P2__colorWrap .colorBox label:nth-of-type(5) {
+  background-color: #981CA8;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P2__colorWrap .colorBox label:nth-of-type(6) {
+  background-color: #17AC34;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P2__colorWrap .colorBox label:nth-of-type(7) {
+  background-color: #E8E13A;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P2__colorWrap .colorBox label:nth-of-type(8) {
+  background-color: #964E21;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P2__colorWrap .colorBox label:nth-of-type(9) {
+  background-color: #FD6BCB;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P2__colorWrap .colorBox label:nth-of-type(10) {
+  background-color: #FC2222;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P2__colorWrap .colorBox label:nth-of-type(11) {
+  background-color: #FC8722;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P2__colorWrap .colorBox label:nth-of-type(12) {
+  background-color: #1B42E8;
+} */
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P2__colorWrap .colorBox label:nth-of-type(6n) {
+  margin-right: none;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P2__colorWrap .colorBox label::after {
+  display: block;
+  width: 100px;
+  height: 100px;
+  /* background-color: yellowgreen; */
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P2__colorWrap .colorBox .imgBox {
+  position: relative;
+  width: 72px;
+  height: 50px;
+  margin-right: 55px;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P2__colorWrap .colorBox .imgBox:nth-of-type(6n) {
+  margin-right: none;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P2__colorWrap .colorBox .imgBox img.colorBox_check {
+  display: none;
+  position: absolute;
+  left: 36px;
+  top: 25px;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P2__colorWrap .colorBox .imgBox img.colorBox_check_on {
+  display: block;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P2__checked {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 50px;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P2__checked .checkedTitle {
+  line-height: 40px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #707070;
+  margin-right: 24px;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P2__checked .checkedColor {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-color: none;
+  margin-right: 16px;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P2__checked .checkedText {
+  line-height: 40px;
+  font-size: 1.8rem;
+  color: #707070;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P3__shapeTitle {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #333333;
+  margin-top: 32px;
+  margin-bottom: 8px;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P3__shapeBox1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P3__shapeBox1 input {
+  display: none;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P3__shapeBox1 label {
+  width: 150px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  font-size: 1.8rem;
+  background-color: white;
+  border: 1px solid #BEBEBE;
+  border-radius: 20px;
+  margin-right: 15px;
+  margin-top: 24px;
+  cursor: pointer;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P3__shapeBox1 .oncheck_shape {
+  color: white;
+  background-color: #B4BF5E;
+  border: 1px solid #B4BF5E;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P3__shapeBox1:nth-of-type(4n) {
+  margin-right: none;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P3__shapeBox2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P3__shapeBox2 input {
+  display: none;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P3__shapeBox2 label {
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  font-size: 1.9rem;
+  background-color: white;
+  border: 1px solid #BEBEBE;
+  border-radius: 50%;
+  margin-right: 21px;
+  margin-top: 24px;
+  cursor: pointer;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P3__shapeBox2 .oncheck_shape {
+  color: white;
+  background-color: #B4BF5E;
+  border: 1px solid #B4BF5E;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P4__imageTitleBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P4__imageTitleBox .imageTitle {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #333333;
+  margin-top: 32px;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P4__imageTitleBox .imageAttention {
+  font-size: 1.2rem;
+  color: #707070;
+  margin-left: 16px;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P4__imageBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P4__imageBox input {
+  display: none;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P4__imageBox label {
+  width: 150px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  font-size: 1.8rem;
+  background-color: white;
+  border: 1px solid #BEBEBE;
+  border-radius: 20px;
+  margin-right: 15px;
+  margin-top: 24px;
+  cursor: pointer;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P4__imageBox .oncheck_image {
+  color: white;
+  background-color: #B4BF5E;
+  border: 1px solid #B4BF5E;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P5__genreTitle {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #333333;
+  margin-top: 32px;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P5__Box1 {
+  position: relative;
+  width: 100%;
+  height: 410px;
+  background-color: white;
+  border: 1px solid #707070;
+  border-radius: 10px;
+  margin-top: 24px;
+  padding-top: 10px;
+  padding-left: 36px;
+  z-index: 10;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P5__Box1__genreBoxAttention {
+  font-size: 1.2rem;
+  color: #707070;
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P5__Box1__genreBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P5__Box1__genreBox div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 190px;
+  height: 60px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P5__Box1__genreBox div input {
+  -webkit-transform: scale(1.8, 1.8) translateY(-1px);
+      -ms-transform: scale(1.8, 1.8) translateY(-1px);
+          transform: scale(1.8, 1.8) translateY(-1px);
+  cursor: pointer;
+  padding: 10px 0 10px 5px;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P5__Box1__genreBox div label {
+  font-size: 1.8rem;
+  cursor: pointer;
+  padding: 15px 15px;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P6__Title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #333333;
+  margin-top: 32px;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P6__Box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P6__Box__left {
+  position: relative;
+  width: 360px;
+  height: 360px;
+  border: 1px solid #707070;
+  background-color: white;
+  margin-top: 16px;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P6__Box__left div img {
+  width: 230px;
+  height: auto;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  left: 50%;
+  top: 40%;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P6__Box__left div .heightLong {
+  height: 230px;
+  width: auto;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P6__Box__left div .mypageD__post__P6__sampletext {
+  font-size: 3.0rem;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  left: 50%;
+  top: 80%;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P6__Box__right {
+  width: 360px;
+  margin: 30px 40px 0 40px;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P6__Box__right .changeLanguageBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.5rem;
+  color: #707070;
+  margin-bottom: 40px;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P6__Box__right .changeLanguageBox img {
+  margin: 0 10px;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P6__Box__right .changeLanguageBox .japanese {
+  display: block;
+  width: 120px;
+  text-align: right;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P6__Box__right .changeLanguageBox .english {
+  display: block;
+  width: 120px;
+  text-align: left;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P6__Box__right .changeLanguageBox .mypageD__post__P6__nonselect {
+  color: #BEBEBE;
+  cursor: pointer;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P6__Box__right .inputBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P6__Box__right .inputBox input {
+  display: none;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P6__Box__right .inputBox label {
+  display: block;
+  width: 150px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: normal;
+  background-color: white;
+  color: #707070;
+  border: 1px solid #707070;
+  border-radius: 20px;
+  margin-bottom: 24px;
+  cursor: pointer;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P6__Box__right .inputBox .oncheck_font {
+  color: white;
+  background-color: #B4BF5E;
+  border: 1px solid #B4BF5E;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P6__Box .font_mintyo_san {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P6__Box .font_gothic_serif {
+  font-family: 'Noto Serif JP', serif;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P6__Box .font_maru_jp {
+  font-family: 'M PLUS 1p', sans-serif;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P6__Box .font_maru_en {
+  font-family: 'Duru Sans', sans-serif;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P6__Box .font_pop_jp {
+  font-family: 'Kosugi Maru', sans-serif;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P6__Box .font_pop_en {
+  font-family: 'Poppins', sans-serif;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P7__Title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #333333;
+  margin-top: 32px;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P7__Box {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P7__Box input {
+  display: none;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P7__Box label.priceBox {
+  display: block;
+  width: 200px;
+  height: 80px;
+  border: 2px solid #BEBEBE;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P7__Box label.priceBox .price {
+  margin-top: 5px;
+  margin-left: 20px;
+  font-size: 3.0rem;
+  color: #333333;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P7__Box label.priceBox .profit__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  font-size: 1.4rem;
+  color: #707070;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P7__Box label.priceBox .profit__box .profitText {
+  margin-right: 10px;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P7__Box label.priceBox .profit__box .profitPrice {
+  margin-right: 20px;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P7__Box label.oncheck_priceBox {
+  color: white;
+  background-color: #B4BF5E;
+  border: 1px solid #B4BF5E;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P7__Box label.oncheck_priceBox .price {
+  color: white;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P7__Box label.oncheck_priceBox .profit__box {
+  color: white;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P8__Title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #333333;
+  margin-top: 32px;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P8__Box .logoImgBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P8__Box .logoImgBox img.logoImg {
+  width: 250px;
+  height: 250px;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P8__Box .logoImgBox .logosampleBox {
+  width: 420px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 10px;
+  margin-left: 30px;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P8__Box .logoImgBox .logosampleBox .logo_sample {
+  background-color: #BEBEBE;
+  width: 100px;
+  height: 100px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P8__Box .theme {
+  font-size: 1.8rem;
+  color: #333333;
+  margin-top: 30px;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P8__Box .text {
+  font-size: 1.8rem;
+  color: #707070;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P8__Box .colorBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 10px;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P8__Box .colorBox .color {
+  width: 35px;
+  height: 35px;
+  background-color: blue;
+  margin-left: 10px;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__P8__Box .colorBox .colortext {
+  font-size: 1.8rem;
+  color: #707070;
+  margin-left: 20px;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__next, .mypageD__post__wrap .mypageD__post__box .mypageD__post__postBt {
+  width: 300px;
+  height: 60px;
+  font-size: 2.0rem;
+  background-color: #F2A679;
+  text-align: center;
+  line-height: 60px;
+  color: white;
+  margin: 64px auto 40px auto;
+  cursor: pointer;
+}
+
+.mypageD__post__wrap .mypageD__post__box .mypageD__post__postBt {
+  background-color: #F2797E;
+}
+
+.footer__information {
+  background-color: #F8F8F8;
+  border: 1px solid #E5E5E5;
+  padding-top: 50px;
+  padding-bottom: 80px;
+}
+
+.footer__information .footer__information__box {
+  width: 1200px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__information .footer__information__box .footer__information__left {
+  width: 60%;
+}
+
+.footer__information .footer__information__box .footer__information__left p {
+  display: block;
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+}
+
+.footer__information .footer__information__box .footer__information__left p:first-child {
+  width: 200px;
+  background: url(../img/index_information_price.png) no-repeat 2px center;
+  font-weight: bold;
+  padding-left: 35px;
+  margin-bottom: 20px;
+}
+
+.footer__information .footer__information__box .footer__information__left p:last-child {
+  color: #BEBEBE;
+  padding-right: 50px;
+}
+
+.footer__information .footer__information__box .footer__information__right {
+  display: block;
+  width: 40%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer__information .footer__information__box .footer__information__right img.logo__midium {
+  width: 279px;
+  height: 66px;
+  margin: 0 auto 40px auto;
+}
+
+.footer__information .footer__information__box .footer__information__mail {
+  width: 380px;
+  height: 174px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #ffffff;
+  border: 1px solid #E5E5E5;
+  padding: 30px 20px;
+}
+
+.footer__information .footer__information__box .footer__information__mail p {
+  font-size: 1.5rem;
+  line-height: 2.0rem;
+}
+
+.footer__information .footer__information__box .footer__information__mail p:first-child {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer__information .footer__information__box .footer__information__mail a {
+  text-decoration: none;
+}
+
+.footer__information .footer__information__box .footer__information__mail a .footer__information__mail__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  width: 170px;
+  height: 44px;
+  line-height: 44px;
+  background-color: #F2A679;
+  border-radius: 10px;
+  margin: 20px auto 0 auto;
+}
+
+.footer__information .footer__information__box .footer__information__mail a .footer__information__mail__btn:hover {
+  opacity: 0.7;
+}
+
+.footer__information .footer__information__box .footer__information__mail a .footer__information__mail__btn img.mail {
+  height: 16px;
+  margin: auto 10px auto 15px;
+}
+
+.footer__information .footer__information__box .footer__information__mail a .footer__information__mail__btn p {
+  font-size: 1.6rem;
+  line-height: 44px;
+  color: #FFFFFF;
+  font-family: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
+  font-weight: normal;
+  padding-left: 5px;
+}
+
+.footer__sitemap_wrap {
+  background-color: #505050;
+  padding: 20px 0;
+}
+
+.footer__sitemap_wrap .footer__sitemap_box {
+  position: relative;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.footer__sitemap_wrap .footer__sitemap_box ul {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.footer__sitemap_wrap .footer__sitemap_box ul a {
+  text-decoration: none;
+}
+
+.footer__sitemap_wrap .footer__sitemap_box ul a li {
+  font-size: 1.2rem;
+  display: inline-block;
+  color: #FFFFFF;
+  margin: 0 10px;
+}
+
+.footer__sitemap_wrap .footer__sitemap_box a.footr__back__top__link .footr__back__top {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  display: block;
+  border-radius: 50%;
+  background-color: #333333;
+  text-align: center;
+  line-height: 70px;
+  right: 0;
+  bottom: 8px;
+}
+
+.footer__copyright {
+  background-color: #333333;
+  text-align: center;
+  padding: 7px 0;
+}
+
+.footer__copyright small {
+  color: #ffffff;
+  font-size: 1.2rem;
+}

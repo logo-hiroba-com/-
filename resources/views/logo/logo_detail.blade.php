@@ -42,7 +42,7 @@
         </div>
         <div class="logo__detail__main__comtent">
             <div class="logo__detail__main__left">
-                <p class="logo__detail__main__imgBox"><img class="logo__detail__main__img" src="/storage/{{ $logo_now->logoImage->cust_before_path }}" alt="{{ $logo_now->logoProperty->logo_title }}"></p>
+                <p class="logo__detail__main__imgBox"><img class="logo__detail__main__img" src="{{asset('/storage/'.$logo_now->logoImage->cust_before_path) }}" alt="{{ $logo_now->logoProperty->logo_title }}"></p>
                 <div class="logo__detail__main_sampleimg">
                     <ul>
                     <li>
@@ -121,7 +121,7 @@
             <a href="{{route('logos.show',$logo->id)}}">
                 <div class="index__logobox">
                     @if(!empty($logo->logoImage->cust_before_path))
-                    <img src="/storage/{{ $logo->logoImage->cust_before_path }}" alt="{{ $logo->logoProperty->logo_title }}">
+                    <img src="{{asset('/storage/'.$logo->logoImage->cust_before_path) }}" alt="{{ $logo->logoProperty->logo_title }}">
                     @endif
                 </div>
                 <div class="index__logo__text">
@@ -140,12 +140,12 @@
 </main>
 @stop
 
-@section('css')
+@section('styles')
 <!-- <link rel="stylesheet" href="{{asset('css/style.css')}}"> -->
 <link rel="stylesheet" href="{{asset('css/detail.css')}}">
 @stop
 
-@section('js')
+@section('scripts')
 <script src="{{asset('/js/jquery.js')}}"></script>
 <script>
     

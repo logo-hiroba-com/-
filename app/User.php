@@ -50,6 +50,6 @@ class User extends Authenticatable
     //ロゴテーブルへ紐付け
     public function logo()
     {
-        return $this->hasMany('App\Logo','user_id','id');
+        return $this->hasOne('App\Logo');
     }
 }

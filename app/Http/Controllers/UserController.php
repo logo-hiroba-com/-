@@ -10,6 +10,7 @@ use App\logoProperty;
 use App\logoImprove;
 use App\logoColor;
 use App\logoFormat;
+use App\logoType;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -74,20 +75,26 @@ class UserController extends Controller
         $error;
 
         if($password == $repassword){
+            $email_check = User::where('mail',"$email")->first();
+            if(!isset($email_check)){
 
-            $user = User::create([
-                'username' => $username,
-                'mail' => $email,
-                'password' => Hash::make($password),
-                'email_verify_token' => base64_encode($email),
-                'user_type' => $usertype
-            ]);
-            $user->save();
+                $user = User::create([
+                    'username' => $username,
+                    'mail' => $email,
+                    'password' => Hash::make($password),
+                    'email_verify_token' => base64_encode($email),
+                    'user_type' => $usertype
+                ]);
+                $user->save();
+                
+                view('user.user_registered')->with('username',$username);
 
-            $send_email = new EmailVerification($user);
-            Mail::to($email)->send($send_email);
-
-            return view('user.user_registered')->with('username',$username);
+                $send_email = new EmailVerification($user);
+                Mail::to($email)->send($send_email);
+            }else{
+                $error = 1;
+                return view('user.user_register')->with('error_num',$error)->with('email',$email);
+            }
         }else{
             $error = 1;
             return view('user.user_register')->with('error_num',$error)->with('email',$email);
@@ -101,21 +108,36 @@ class UserController extends Controller
             //無効
             return view('user.user_mainregister')->with('message','無効なトークンです。');
         }else{
-            $user = User::where('email_verify_token',$email_token)->first();
-            $user->status = config('const.USER_STATUS.REGISTER');
-            //Carbonは日付を自動的に生成するもの
-            $user->email_verified_at = Carbon::now();
-            // $user_id = $user->id;
-            $user->save();
-            // $user_id = $user->id;
-            // $designer = Designer::create('user_id',$user_id);
-            // $designer->save();
             
-            $logos = Logo::get();
-            $logo_formats = logoFormat::get();
-            $logo_improves = logoImprove::get();
-            $logo_colors = logoColor::get();
-            return view('logo.logo_list')->with('logos',$logos)->with(['logo_improves'=>$logo_improves,'logo_colors'=>$logo_colors,'logo_formats'=>$logo_formats]);
+            $user_datas = User::where('email_verify_token',$email_token)->first();
+            $status_now = $user_datas->status;
+
+            if($status_now == 0){
+                $user_datas->status = config('const.USER_STATUS.REGISTER');
+                //Carbonは日付を自動的に生成するもの
+                $user_datas->email_verified_at = Carbon::now();
+                // $user_id = $user->id;
+                $user_datas->save();
+
+                $user_id = $user_datas->id;
+                $username = $user_datas->username;
+    
+                $designer = Designer::create([
+                    'user_id' => $user_id,
+                    'username' => $username
+                ]);
+                $designer->save();
+            }
+
+            Auth::login($user_datas);
+            $user_type = $user_datas->user_type;
+            if($user_type == 1){
+                session()->put(['user_datas'=>$user_datas]);
+                return redirect()->route('logos.index');
+            }else{
+                session()->put(['user_datas'=>$user_datas]);
+                return redirect()->route('setting.index');
+            }
         }//if
     }
 
@@ -137,14 +159,20 @@ class UserController extends Controller
 
         // dd(Auth::attempt(['mail' => $mail, 'password' => $password]));
 
-        if(Auth::attempt(['mail' => $mail, 'password' => $password])){
+        if(Auth::attempt(['mail' => $mail, 'password' => $password, 'status' => 1])){
             // print_r();
             // dd($mail);
             $user_datas = User::where('mail',$mail)->first();
             // dd($user_datas);
             // return redirect()->route('logos.index')->with('user_datas',$user_datas);
-            session()->put(['user_datas'=>$user_datas]);
-            return redirect()->route('logos.create');
+            
+            if($user_datas->user_type == 1){
+                session()->put(['user_datas'=>$user_datas]);
+                return redirect()->route('logos.index');
+            }else{
+                session()->put(['user_datas'=>$user_datas]);
+                return redirect()->route('setting.index');
+            }
             // $logos = Logo::get();
             // $logo_formats = logoFormat::get();
 

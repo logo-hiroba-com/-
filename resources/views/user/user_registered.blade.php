@@ -8,7 +8,7 @@
 @stop
 
 @section('styles')
-  <link rel="stylesheet" href="{{asset('css/logo_login.css')}}">
+  <link rel="stylesheet" href="{{asset('css/sigin.css')}}">
 @stop
 
 @section('content')

@@ -16,6 +16,15 @@ html {
   /* iOS 8+ */
 }
 
+.none{
+  display: none;
+}
+.flex{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 *,
 ::before,
 ::after {
@@ -374,6 +383,12 @@ video {
   text-shadow: none;
 }
 
+html {
+  font-size: 62.5%;
+  font-family: 'Roboto', sans-serif;
+  color: #333333;
+}
+
 body {
   font-size: 62.5%;
   color: #333333;
@@ -381,7 +396,7 @@ body {
 
 .header__top {
   width: auto;
-  height: 98px;
+  height: 80px;
   background-color: #F8F8F8;
   border: 1px solid #EAEAEA;
 }
@@ -394,7 +409,7 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 1200px;
-  height: 98px;
+  height: 80px;
   margin: 0 auto;
 }
 
@@ -406,18 +421,18 @@ body {
       align-content: center;
 }
 
-.header__top .header__top__contents .header__top__contents__left .header__logo {
-  width: 220px;
+.header__top .header__top__contents .header__top__contents__left a.header__logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 98px;
+  height: 80px;
   -ms-flex-line-pack: center;
       align-content: center;
 }
 
-.header__top .header__top__contents .header__top__contents__left .header__logo img {
-  margin: auto 30px auto 0;
+.header__top .header__top__contents .header__top__contents__left a.header__logo img {
+  margin: auto 0;
+  height: 40px;
 }
 
 .header__top .header__top__contents .header__top__contents__left .header__search {
@@ -429,15 +444,15 @@ body {
   height: 44px;
   border: 1px solid #E5E5E5;
   border-radius: 10px;
-  margin: auto 0;
+  margin: auto 0 auto 24px;
 }
 
 .header__top .header__top__contents .header__top__contents__left .header__search .header__search__text {
   width: 80%;
   line-height: 44px;
   color: #333333;
-  font-size: 1rem;
-  font-family: 'Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro W3','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+  font-size: 1.6rem;
+  font-family: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
   padding-left: 15px;
 }
 
@@ -455,82 +470,34 @@ body {
   border-radius: 0 10px 10px 0;
 }
 
-.header__top .header__top__contents .header__top__contents__right {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 1rem;
-}
-
-.header__top .header__top__contents .header__top__contents__right .header__a__mail {
-  text-decoration: none;
-  margin: auto 30px auto 0;
-}
-
-.header__top .header__top__contents .header__top__contents__right .header__a__mail .header__mail {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  width: 170px;
-  height: 44px;
-  line-height: 44px;
-  background-color: #F2A679;
-  border-radius: 10px;
-}
-
-.header__top .header__top__contents .header__top__contents__right .header__a__mail .header__mail:hover {
-  opacity: 0.7;
-}
-
-.header__top .header__top__contents .header__top__contents__right .header__a__mail .header__mail img.mail {
-  height: 16px;
-  margin: auto 10px auto 15px;
-}
-
-.header__top .header__top__contents .header__top__contents__right .header__a__mail .header__mail p {
-  color: #FFFFFF;
-  font-family: 'Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro W3','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
-  font-weight: normal;
-  padding-left: 7px;
-}
-
-.header__top .header__top__contents .header__top__contents__right .header__a__login {
+.header__top .header__top__contents a.header__a__login {
   text-decoration: none;
   margin: auto 0;
 }
 
-.header__top .header__top__contents .header__top__contents__right .header__a__login .header__login {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-line-pack: center;
-      align-content: center;
+.header__top .header__top__contents a.header__a__login .header__login {
+  display: block;
   width: 120px;
   height: 44px;
   line-height: 44px;
-  background-color: #B4BF5E;
+  background-color: #F2A679;
   border-radius: 10px;
+  margin: auto 0;
 }
 
-.header__top .header__top__contents .header__top__contents__right .header__a__login .header__login:hover {
+.header__top .header__top__contents a.header__a__login .header__login:hover {
   opacity: 0.7;
 }
 
-.header__top .header__top__contents .header__top__contents__right .header__a__login .header__login img {
-  height: 16px;
-  margin: auto 10px auto 15px;
-}
-
-.header__top .header__top__contents .header__top__contents__right .header__a__login .header__login p {
+.header__top .header__top__contents a.header__a__login .header__login p {
+  font-size: 1.6rem;
   color: #FFFFFF;
-  font-family: 'Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro W3','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
   font-weight: normal;
+  text-align: center;
 }
 
 .header__nav {
-  height: 125px;
+  height: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -565,7 +532,7 @@ body {
 .header__nav .header__nav__ul a:hover:nth-child(n+1):before {
   content: '';
   position: absolute;
-  height: 125px;
+  height: 100px;
   border: 2px solid #E5E5E5;
   -webkit-transform: translate(198px, 0px);
       -ms-transform: translate(198px, 0px);
@@ -575,21 +542,21 @@ body {
 .header__nav .header__nav__ul a:before {
   content: '';
   position: absolute;
-  height: 85px;
+  height: 70px;
   border: 1px solid #E5E5E5;
-  -webkit-transform: translateY(20px);
-      -ms-transform: translateY(20px);
-          transform: translateY(20px);
+  -webkit-transform: translateY(15px);
+      -ms-transform: translateY(15px);
+          transform: translateY(15px);
 }
 
 .header__nav .header__nav__ul a:last-child:after {
   content: '';
   position: absolute;
-  height: 85px;
+  height: 70px;
   border: 1px solid #E5E5E5;
-  -webkit-transform: translate(198px, 20px);
-      -ms-transform: translate(198px, 20px);
-          transform: translate(198px, 20px);
+  -webkit-transform: translate(198px, 15px);
+      -ms-transform: translate(198px, 15px);
+          transform: translate(198px, 15px);
 }
 
 .header__nav .header__nav__ul a li {
@@ -605,7 +572,7 @@ body {
 
 .header__nav .header__nav__ul a li div {
   width: 100%;
-  height: 85px;
+  height: 70px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -618,33 +585,33 @@ body {
 }
 
 .header__nav .header__nav__ul a li div img {
-  width: 32px;
-  height: 32px;
+  width: 24px;
+  height: 24px;
   margin: auto;
 }
 
 .header__nav .header__nav__ul a li div p {
   text-align: center;
-  font-size: 1rem;
+  font-size: 1.4rem;
 }
 
-.header__img {
-  display: block;
-  width: 100%;
-  height: 200px;
-  background-color: #CCC;
-}
-
-.searchListView {
+.header__img__box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 200px;
+  background-color: #FFFFFF;
+  overflow: hidden;
+  margin-top: 8px;
 }
 
-.searchListHidden {
-  display: none;
+.header__img__box a {
+  text-decoration: none;
+  margin: 0 15px;
 }
 
 .index__search__wrap {
@@ -653,11 +620,13 @@ body {
 
 .index__search__wrap .index__search {
   width: 1200px;
+  /* 修正 */
+  height: auto;
   margin: 0 auto 0 auto;
-  padding: 40px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding-top: 24px;
 }
 
 .index__search__wrap .index__search .index__search__left {
@@ -671,7 +640,7 @@ body {
 
 .index__search__wrap .index__search .index__search__left .index__search__keyword p {
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 1.4rem;
   margin-bottom: 20px;
 }
 
@@ -691,8 +660,8 @@ body {
   width: 80%;
   line-height: 44px;
   color: #333333;
-  font-size: 1rem;
-  font-family: 'Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro W3','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+  font-size: 1.6rem;
+  font-family: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
   padding-left: 15px;
 }
 
@@ -712,12 +681,12 @@ body {
 
 .index__search__wrap .index__search .index__search__left .index__search__price p {
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 1.4rem;
   margin-bottom: 20px;
 }
 
 .index__search__wrap .index__search .index__search__left .index__search__price .index__search__price__box {
-  font-size: 1.1rem;
+  font-size: 1.6rem;
 }
 
 .index__search__wrap .index__search .index__search__left .index__search__price .index__search__price__box input {
@@ -727,21 +696,25 @@ body {
   margin-left: 30px;
   margin-right: 12px;
   padding-bottom: 10px;
+  cursor: pointer;
 }
 
 .index__search__wrap .index__search .index__search__left .index__search__price .index__search__price__box input:first-child {
   margin-left: 0;
 }
 
+.index__search__wrap .index__search .index__search__left .index__search__price .index__search__price__box label {
+  cursor: pointer;
+}
+
 .index__search__wrap .index__search .index__search__right {
   display: block;
   width: 67%;
-  font-size: 1rem;
 }
 
 .index__search__wrap .index__search .index__search__right .index__search__navi {
   display: block;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   position: relative;
 }
 
@@ -754,12 +727,8 @@ body {
   display: flex;
 }
 
-.index__search__wrap .index__search .index__search__right .index__search__navi ul .listChoose {
-  background-color: #B4BF5E;
-  color: #FFFFFF;
-}
-
 .index__search__wrap .index__search .index__search__right .index__search__navi ul li {
+  font-size: 1.5rem;
   width: 100%;
   height: 100%;
   background-color: #FFFFFF;
@@ -777,20 +746,50 @@ body {
 }
 
 .index__search__wrap .index__search .index__search__right .index__search__navi__box {
+  width: 750px;
+    /* 修正 */
+  /* display: -webkit-box;
+  display: -ms-flexbox;
+    display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; */
+  -webkit-box-pack: first baseline;
+      -ms-flex-pack: first baseline;
+          justify-content: first baseline;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-left: 55px;
-  font-size: 1.1rem;
+  font-size: 2.8rem;
 }
 
 .index__search__wrap .index__search .index__search__right .index__search__navi__box div {
-  margin-bottom: 20px;
-  min-width: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 150px;
+  margin-bottom: 16px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .index__search__wrap .index__search .index__search__right .index__search__navi__box div input {
-  margin-right: 10px;
+  margin-right: 4px;
   -webkit-transform: scale(1.5, 1.5) translateY(-1px);
       -ms-transform: scale(1.5, 1.5) translateY(-1px);
           transform: scale(1.5, 1.5) translateY(-1px);
+  cursor: pointer;
+  padding: 10px 0 10px 5px;
+}
+
+.index__search__wrap .index__search .index__search__right .index__search__navi__box div label {
+  font-size: 1.4rem;
+  cursor: pointer;
+  padding: 5px;
 }
 
 .index__logobar__box {
@@ -805,10 +804,11 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 1rem;
+  font-size: 1.6rem;
 }
 
 .index__logobar__box .index__logobar__num__box div {
+  font-size: 1.6rem;
   display: inline-block;
   -ms-flex-line-pack: center;
       align-content: center;
@@ -819,14 +819,26 @@ body {
 }
 
 .index__logobar__box .index__logobar__display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-left: 30px;
 }
 
 .index__logobar__box .index__logobar__display input {
-  -webkit-transform: scale(1.2, 1.2) translateY(-1px);
-      -ms-transform: scale(1.2, 1.2) translateY(-1px);
-          transform: scale(1.2, 1.2) translateY(-1px);
-  margin-right: 10px;
+  -webkit-transform: scale(1.2, 1.2);
+      -ms-transform: scale(1.2, 1.2);
+          transform: scale(1.2, 1.2);
+  cursor: pointer;
+  margin: auto 5px auto 0;
+}
+
+.index__logobar__box .index__logobar__display label {
+  cursor: pointer;
+  padding: 5px 0;
 }
 
 .index__logobar__box .index__logobar__rine__box {
@@ -841,13 +853,15 @@ body {
 }
 
 .index__logobar__box .index__logobar__rine__box .index__logobar__rine__text {
+  font-size: 1.6rem;
   margin-left: 500px;
 }
 
 .index__logobar__box .index__logobar__rine__box select {
+  font-size: 1.6rem;
   width: 150px;
   border: 1px solid #C1C1C1;
-  border-radius: 10px;
+  border-radius: 5px;
   padding: 5px 10px;
   margin-left: 30px;
   background: url(../img/index_logobar_arrow.png) no-repeat 120px center;
@@ -855,97 +869,112 @@ body {
 }
 
 .index__logobar__box .index__logobar__rine__box select option {
+  font-size: 1.6rem;
   color: #333333;
 }
 
 .index__logobox__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   width: 1200px;
-  margin: 30px auto 30px auto;
-}
-
-.index__logobox__container .index__logobox__wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-bottom: 50px;
-  width: 100%;
+  margin: 30px auto 50px auto;
 }
 
-.index__logobox__container .index__logobox__wrap a {
+.index__logobox__container .logo__logobox__wrap {
   position: relative;
-  text-decoration: none;
+  display: block;
+  width: 166px;
+  height: 166px;
   overflow: hidden;
 }
 
-.index__logobox__container .index__logobox__wrap a:nth-child(5n-3) {
-  margin: 0 20px;
+.index__logobox__container .logo__logobox__wrap:nth-child(6n-5) {
+  margin: 0 20px 40px 0;
 }
 
-.index__logobox__container .index__logobox__wrap a:nth-child(5n-2) {
-  margin: 0 20px;
+.index__logobox__container .logo__logobox__wrap:nth-child(6n-4) {
+  margin: 0 20px 40px 20px;
 }
 
-.index__logobox__container .index__logobox__wrap a:nth-child(5n-1) {
-  margin: 0 20px;
+.index__logobox__container .logo__logobox__wrap:nth-child(6n-3) {
+  margin: 0 20px 40px 20px;
 }
 
-.index__logobox__container .index__logobox__wrap a .index__logobox {
-  width: 200px;
-  height: 200px;
+.index__logobox__container .logo__logobox__wrap:nth-child(6n-2) {
+  margin: 0 20px 40px 20px;
 }
 
-.index__logobox__container .index__logobox__wrap a .index__logobox img {
-  position: relative;
+.index__logobox__container .logo__logobox__wrap:nth-child(6n-1) {
+  margin: 0 20px 40px 20px;
+}
+
+.index__logobox__container .logo__logobox__wrap:nth-child(6n) {
+  margin: 0 0 40px 20px;
+}
+
+.index__logobox__container .logo__logobox__wrap label {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.index__logobox__container .logo__logobox__wrap label input {
+  display: none;
+}
+
+.index__logobox__container .logo__logobox__wrap label img {
+  padding: 5px;
+  cursor: cell;
+}
+
+.index__logobox__container .logo__logobox__wrap a {
+  width: 166px;
+  height: 166px;
+}
+
+.index__logobox__container .logo__logobox__wrap a img {
+  position: absolute;
+  width: 166px;
+  height: 166px;
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   left: 50%;
   top: 50%;
-  display: block;
-  width: 180px;
-  height: auto;
-  -webkit-transition: 0.2s;
-  -o-transition: 0.2s;
-  transition: 0.2s;
 }
 
-.index__logobox__container .index__logobox__wrap a .index__logobox img:hover {
-  width: 200px;
-  height: auto;
-}
-
-.index__logobox__container .index__logobox__wrap a .index__logo__text {
+.index__logobox__container .logo__logobox__wrap a .index__logo__text {
   display: none;
   position: absolute;
   width: 100%;
   height: 60px;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: #76513D;
 }
 
-.index__logobox__container .index__logobox__wrap a .index__logo__text p {
+.index__logobox__container .logo__logobox__wrap a .index__logo__text p {
   text-align: center;
-  font-size: 1.1rem;
+  font-size: 1.6rem;
   font-weight: bold;
-  color: #333333;
+  color: white;
+  margin-top: 11px;
 }
 
-.index__logobox__container .index__logobox__wrap a .index__logo__text p:last-child {
-  font-size: 1rem;
-  color: #BEBEBE;
+.index__logobox__container .logo__logobox__wrap a .index__logo__text p:last-child {
+  font-size: 1.2rem;
+  color: white;
   font-weight: normal;
+  margin-top: 8px;
 }
 
-.index__logobox__container .index__logobox__wrap a:hover .index__logo__text {
+.index__logobox__container .logo__logobox__wrap a:hover .index__logo__text {
   display: block;
   -webkit-animation-name: logotext;
           animation-name: logotext;
@@ -955,39 +984,194 @@ body {
           animation-fill-mode: forwards;
 }
 
+.index__logobox__container .logo__logobox__wrap a:hover::after {
+  position: absolute;
+  content: "";
+  width: 166px;
+  height: 166px;
+  border: 1px solid #76513D;
+  top: 0;
+}
+
+.index__logobox__container .logo__logobox__wrap a:hover img {
+  -webkit-animation-name: big;
+          animation-name: big;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  width: 200px;
+  height: 200px;
+}
+
 @-webkit-keyframes logotext {
   0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    -webkit-transform: translateY(166px);
+            transform: translateY(166px);
   }
   100% {
-    -webkit-transform: translateY(-60px);
-            transform: translateY(-60px);
+    -webkit-transform: translateY(106px);
+            transform: translateY(106px);
   }
 }
 
 @keyframes logotext {
   0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    -webkit-transform: translateY(166px);
+            transform: translateY(166px);
   }
   100% {
-    -webkit-transform: translateY(-60px);
-            transform: translateY(-60px);
+    -webkit-transform: translateY(106px);
+            transform: translateY(106px);
+  }
+}
+
+@-webkit-keyframes big {
+  0% {
+    width: 166px;
+    height: 166px;
+  }
+  100% {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+@keyframes big {
+  0% {
+    width: 166px;
+    height: 166px;
+  }
+  100% {
+    width: 180px;
+    height: 180px;
   }
 }
 
 .pagenatoin__box {
-  font-size: 1.3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 0 auto 50px auto;
   text-align: center;
+  color: #707070;
+}
+/* 修正 */
+.pagenatoin__box>div {
+  font-size: 2.4rem;
+  list-style-type: none;
+  /* display: inline-block; */
+  margin: 0 5px;
+  cursor: pointer;
+  border: 1px solid #E8E8E8;
+  border-radius: 5px;
 }
 
-.pagenatoin__box li {
+/* 修正 */
+.pagenatoin__box .pagenatoin__back {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.8rem;
+  padding: 10px 20px 10px 20px;
+}
+/* 修正 */
+.pagenatoin__box .pagenatoin__back i {
+  font-size: 1.2rem;
+  margin-right: 10px;
+}
+
+.pagenatoin__box .pagenatoin__back:hover {
+  background-color: #B4BF5E;
+}
+
+/* 修正 */
+.pagenatoin__box .pagenatoin__back:hover {
+  color: white;
+}
+
+.pagenatoin__box .pagination__next {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.8rem;
+  padding: 10px 20px 10px 20px;
+}
+
+/* 修正 */
+.pagenatoin__box .pagination__next i {
+  font-size: 1.2rem;
+  margin-left: 10px;
+}
+
+.pagenatoin__box .pagination__next:hover {
+  background-color: #B4BF5E;
+}
+
+/* 修正 */
+.pagenatoin__box .pagination__next:hover{
+  color: white;
+}
+
+/* 修正 */
+ul.pagenatoin__pagebox{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style-type: none;
+}
+.pagenatoin__pagebox>li {
+  font-size: 2.4rem;
   list-style-type: none;
   display: inline-block;
-  margin: 0 10px;
+  margin: 0 5px;
   cursor: pointer;
+  border: 1px solid #E8E8E8;
+  border-radius: 5px;
+}
+ul.pagenatoin__pagebox li.pagenatoin__num {
+  font-size: 1.8rem;
+  padding: 10px 15px;
+}
+
+ul.pagenatoin__pagebox li.pagenatoin__num div {
+  pointer-events: none;
+}
+
+ul.pagenatoin__pagebox li.pagenatoin__num:hover {
+  background-color: #B4BF5E;
+}
+
+/* 修正 */
+ul.pagenatoin__pagebox li.pagenatoin__num:hover{
+  color: white;
+}
+
+ul.pagenatoin__pagebox li.pagenatoin__reader {
+  font-size: 1.8rem;
+  padding: 5px 10px;
+  cursor: auto;
+  border: none;
+  line-height: 3.6rem;
+}
+
+ul.pagenatoin__pagebox li.pagenation__now {
+  background-color: #B4BF5E;
+}
+
+/* 修正 */
+ul.pagenatoin__pagebox li.pagenation__now{
+  color: white;
 }
 
 .index_propaganada_container {
@@ -1030,7 +1214,8 @@ body {
 
 .footer__information .footer__information__box .footer__information__left p {
   display: block;
-  font-size: 1rem;
+  font-size: 1.6rem;
+  line-height: 2.5rem;
 }
 
 .footer__information .footer__information__box .footer__information__left p:first-child {
@@ -1070,7 +1255,8 @@ body {
 }
 
 .footer__information .footer__information__box .footer__information__mail p {
-  font-size: 0.8rem;
+  font-size: 1.5rem;
+  line-height: 2.0rem;
 }
 
 .footer__information .footer__information__box .footer__information__mail p:first-child {
@@ -1106,10 +1292,12 @@ body {
 }
 
 .footer__information .footer__information__box .footer__information__mail a .footer__information__mail__btn p {
+  font-size: 1.6rem;
+  line-height: 44px;
   color: #FFFFFF;
-  font-family: 'Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro W3','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+  font-family: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
   font-weight: normal;
-  padding-left: 12px;
+  padding-left: 5px;
 }
 
 .footer__sitemap_wrap {
@@ -1133,7 +1321,7 @@ body {
 }
 
 .footer__sitemap_wrap .footer__sitemap_box ul a li {
-  font-size: 0.7rem;
+  font-size: 1.2rem;
   display: inline-block;
   color: #FFFFFF;
   margin: 0 10px;
@@ -1147,7 +1335,7 @@ body {
   border-radius: 50%;
   background-color: #333333;
   text-align: center;
-  line-height: 60px;
+  line-height: 70px;
   right: 0;
   bottom: 8px;
 }
@@ -1160,28 +1348,5 @@ body {
 
 .footer__copyright small {
   color: #ffffff;
-  font-size: 0.7rem;
-}
-
-/* 絞りの数 */
-.index__search__navi>ul li{
-  position: relative;
-}
-
-.index__search__navi>ul li .optionNum{
-  position: absolute;
-  top: -1rem;
-  right: 0;
-  display: block;
-  border-radius: 50%;
-  color: #fff;
-  text-align: center;
-  line-height: 1.6rem;
-  font-size: 0.6rem;
-}
-
-.optionNumChoose{
-  width: 1.6rem;
-  height: 1.6rem;
-  background: #F2A679;
+  font-size: 1.2rem;
 }

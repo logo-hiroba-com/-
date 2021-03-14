@@ -1,0 +1,1 @@
+<div class="header__img__box"><a href="#"><img src="{{asset('img/header_banner01.jpg')}}" alt="バナー広告"></a><a href="#"><img src="{{asset('img/header_banner02.jpg')}}" alt="バナー広告"></a><a href="#"><img src="{{asset('img/header_banner01.jpg')}}" alt="バナー広告"></a></div>
